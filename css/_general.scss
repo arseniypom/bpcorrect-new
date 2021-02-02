@@ -1,0 +1,60 @@
+/* ----------------------- GENERAL STYLES ----------------------- */
+$main-font: "VTB Group UI";
+$color-neutral-05: #F3F4F6;
+$color-neutral-30: #B1B5BB;
+
+body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, p, a, li, button, input {
+    font-family: $main-font;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.25rem;
+}
+h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.text-muted {
+    color: $color-neutral-30;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-title {
+    color: #22D9A2;
+    font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+
+    h2 {
+        color: $color-neutral-05;
+    }
+}
+
+.container-medium {
+    margin: 6.25rem 8.5rem;
+}
+
+.container-large {
+    margin: 6.25rem 1.94rem;
+}
