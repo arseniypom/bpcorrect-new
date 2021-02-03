@@ -56,13 +56,14 @@ p {
         display: inline-block;
     }
     &-number {
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 
     .title-text-neutral {
         color: $color-neutral-05;
     }
     .title-text-green {
+        margin: 0 .3rem;
         color: #22D9A2;
     }
 

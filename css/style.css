@@ -83,7 +83,7 @@ p {
 }
 
 .title-container-number {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
 .title-container .title-text-neutral {
@@ -91,6 +91,7 @@ p {
 }
 
 .title-container .title-text-green {
+  margin: 0 .3rem;
   color: #22D9A2;
 }
 
@@ -332,9 +333,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -415,5 +416,133 @@ p {
     display: inline-block;
     margin: 0 2rem 1rem;
   }
+}
+
+/* ----------------------- EXISTING CLIENTS CONTAINER ----------------------- */
+.existing-clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.existing-clients-card {
+  width: 24rem;
+}
+
+.existing-clients-card-body {
+  background-color: #2D2F35;
+  border-radius: 8px;
+  height: 12.5rem;
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.existing-clients-card-body-logo-magnit {
+  max-width: 15rem;
+}
+
+.existing-clients-card-body-logo-fns {
+  max-width: 9.5rem;
+}
+
+.existing-clients-card-body-logo-sogaz {
+  max-width: 11rem;
+}
+
+.existing-clients-card-title {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ----------------------- CLIENT PATH CONTAINER ----------------------- */
+.client-path {
+  position: relative;
+}
+
+.client-path-triangle {
+  position: absolute;
+  right: 23.5rem;
+  top: 1rem;
+}
+
+.upper-steps-div {
+  margin-top: 8.25rem;
+}
+
+.client-path-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.client-path-steps-item {
+  max-width: 11rem;
+  position: relative;
+}
+
+.client-path-steps-item .step-number-img {
+  max-width: 5.8rem;
+  position: absolute;
+  right: -2.5rem;
+  top: -2.2rem;
+}
+
+.client-path-steps-item .step-number-img-first {
+  right: -.625rem;
+  top: -4rem;
+}
+
+.client-path-steps-item-number {
+  color: #22D9A2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.client-path-steps-item h4 {
+  font-weight: 600;
+}
+
+.client-path-steps:last-child {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.client-path-timeline {
+  margin: 3.125rem auto 3.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 /*# sourceMappingURL=style.css.map */
