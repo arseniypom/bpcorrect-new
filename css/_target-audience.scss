@@ -1,0 +1,58 @@
+/* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
+
+.target-audience-section {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    img {
+        max-width: 29rem;
+    }
+
+    &-info {
+        width: 30.5rem;
+        position: relative;
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        &-triangle {
+            position: absolute;
+            right: -5rem;
+            top: -4rem;
+        }
+        &-plus {
+            position: absolute;
+            right: -1rem;
+            bottom: -6.625rem;
+        }
+    }
+
+    &-info-bullets {
+        li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .5rem;
+            }
+        }
+
+        p {
+            display: inline;
+        }
+
+        .connect-instruction {
+            text-decoration: underline;
+        }
+        .connect-instruction:hover {
+            color: #fff;
+        }
+    }
+}

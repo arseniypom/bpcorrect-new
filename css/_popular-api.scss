@@ -1,0 +1,85 @@
+/* ----------------------- POPULAR API CONTAINER ----------------------- */
+
+.popular-api {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+.popular-api-card {
+    background-color: #2D2F35;
+    border-radius: 8px;
+    padding: 1rem 1rem 2rem;
+    max-width: 17.5rem;
+    height: 26.75rem;
+
+    position: relative;
+
+    &-icon {
+        max-width: 6.25rem;
+    }
+
+    h4 {
+        margin: 1rem 0;
+        max-width: 13.5rem;
+        font-weight: 600;
+    }
+
+    &-text {
+        margin-left: 1rem;
+
+        p {
+            display: inline;
+            max-width: 13.5rem;
+        }
+    }
+
+    &-button {
+        margin: 2.5rem 0 0 1rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+
+.popular-api-card:last-child {
+    background-color: #000;
+    background-image: url("/images/card-bg-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.25rem 0 2rem 2rem;
+
+    h1 {
+        font-size: 2.125rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+    }
+
+    a {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: #3A85FF;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.popular-api-card-arrow {
+    margin-right: .875rem;
+}
+
+@media (max-width: 1200px) {
+    .popular-api {
+        display: block;
+    }
+
+    .popular-api-card {
+        display: inline-block;
+        margin: 0 2rem 1rem;
+    }    
+}

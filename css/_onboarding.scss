@@ -1,16 +1,18 @@
 /* ----------------------- ONBOARDING CONTAINER ----------------------- */
 
 .onboarding-bg {
-    // background: linear-gradient(0deg, rgba(1, 64, 206, 0.4), rgba(1, 64, 206, 0.4)), conic-gradient(from 156.93deg at 50% 50%, #001144 0deg, #0142D3 114.54deg, #3A85FF 227.05deg, #C8DBFF 360deg);
-    // background-blend-mode: multiply, normal;
-    background: center no-repeat url("../images/onboarding_bg.png");
-    background-size: cover;
     width: 100%;
-    height: 40rem;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .onboarding {
     color: #fff;
+    position: relative;
+    width: 100%;
 
     h3 {
         max-width: 38.3rem;
@@ -35,5 +37,32 @@
         img {
             margin-right: .375rem;
         }
+    }
+
+    &-round-letters {
+        width: 120px;
+        height: 120px;
+
+        position: absolute;
+        right: 2.8rem;
+        top: .5rem;
+
+        -webkit-animation: rotation 13s infinite linear;
+    }
+    @-webkit-keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+
+    &-arrow {
+        max-width: 5.75rem;
+
+        position: absolute;
+        right: 3.6rem;
+        top: 9.5rem;
     }
 }

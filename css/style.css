@@ -27,6 +27,11 @@ body {
 
 h1, h2, h3, h4, p, a, li, button, input {
   font-family: "VTB Group UI";
+  color: inherit;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
 }
 
 h1 {
@@ -55,6 +60,10 @@ p {
   line-height: 1.5rem;
 }
 
+.text-muted-light {
+  color: #F3F4F6;
+}
+
 .text-muted {
   color: #B1B5BB;
 }
@@ -69,22 +78,95 @@ p {
           flex-direction: column;
 }
 
-.container-title {
-  color: #22D9A2;
-  -webkit-font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
-          font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+.title-container h2 {
+  display: inline-block;
 }
 
-.container-title h2 {
+.title-container-number {
+  margin-right: 1.5rem;
+}
+
+.title-container .title-text-neutral {
   color: #F3F4F6;
 }
 
+.title-container .title-text-green {
+  color: #22D9A2;
+}
+
 .container-medium {
-  margin: 6.25rem 8.5rem;
+  margin: 6.25rem auto 5.25rem;
+  max-width: 1070px;
 }
 
 .container-large {
   margin: 6.25rem 1.94rem;
+  max-width: 1220px;
+}
+
+@media (max-width: 1200px) {
+  .container-medium {
+    margin: 6.25rem auto 5.25rem;
+    max-width: 970px;
+  }
+  .container-large {
+    margin: 6.25rem 1.94rem;
+    max-width: 1120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-medium {
+    margin: 6.25rem auto 5.25rem;
+    max-width: 750px;
+  }
+  .container-large {
+    margin: 6.25rem 1.94rem;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-medium {
+    margin: 6.25rem auto 5.25rem;
+    max-width: none;
+  }
+  .container-large {
+    margin: 6.25rem 1.94rem;
+    max-width: none;
+  }
+}
+
+.blue-bg {
+  background: center no-repeat url("../images/onboarding_bg.png");
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.dark-grey-bg {
+  background: #22242A;
+  color: #F3F4F6;
+  overflow: hidden;
+}
+
+.button-blue {
+  color: #fff;
+  background-color: #0062FF;
+  font-family: "VTB Group UI";
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+}
+
+.button-blue-big {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.button-blue-small {
+  padding: .625rem 1.5rem;
+  font-size: .875rem;
 }
 
 /* ----------------------- HEADER ----------------------- */
@@ -106,14 +188,23 @@ p {
 
 /* ----------------------- ONBOARDING CONTAINER ----------------------- */
 .onboarding-bg {
-  background: center no-repeat url("../images/onboarding_bg.png");
-  background-size: cover;
   width: 100%;
-  height: 40rem;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .onboarding {
   color: #fff;
+  position: relative;
+  width: 100%;
 }
 
 .onboarding h3 {
@@ -142,5 +233,187 @@ p {
 
 .onboarding button img {
   margin-right: .375rem;
+}
+
+.onboarding-round-letters {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 2.8rem;
+  top: .5rem;
+  -webkit-animation: rotation 13s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.onboarding-arrow {
+  max-width: 5.75rem;
+  position: absolute;
+  right: 3.6rem;
+  top: 9.5rem;
+}
+
+/* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
+.target-audience-section {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.target-audience-section img {
+  max-width: 29rem;
+}
+
+.target-audience-section-info {
+  width: 30.5rem;
+  position: relative;
+}
+
+.target-audience-section-info h1 {
+  margin-bottom: 1.5rem;
+}
+
+.target-audience-section-info-triangle {
+  position: absolute;
+  right: -5rem;
+  top: -4rem;
+}
+
+.target-audience-section-info-plus {
+  position: absolute;
+  right: -1rem;
+  bottom: -6.625rem;
+}
+
+.target-audience-section-info-bullets li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.target-audience-section-info-bullets li img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .5rem;
+}
+
+.target-audience-section-info-bullets p {
+  display: inline;
+}
+
+.target-audience-section-info-bullets .connect-instruction {
+  text-decoration: underline;
+}
+
+.target-audience-section-info-bullets .connect-instruction:hover {
+  color: #fff;
+}
+
+/* ----------------------- POPULAR API CONTAINER ----------------------- */
+.popular-api {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.popular-api-card {
+  background-color: #2D2F35;
+  border-radius: 8px;
+  padding: 1rem 1rem 2rem;
+  max-width: 17.5rem;
+  height: 26.75rem;
+  position: relative;
+}
+
+.popular-api-card-icon {
+  max-width: 6.25rem;
+}
+
+.popular-api-card h4 {
+  margin: 1rem 0;
+  max-width: 13.5rem;
+  font-weight: 600;
+}
+
+.popular-api-card-text {
+  margin-left: 1rem;
+}
+
+.popular-api-card-text p {
+  display: inline;
+  max-width: 13.5rem;
+}
+
+.popular-api-card-button {
+  margin: 2.5rem 0 0 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.popular-api-card:last-child {
+  background-color: #000;
+  background-image: url("/images/card-bg-black.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6.25rem 0 2rem 2rem;
+}
+
+.popular-api-card:last-child h1 {
+  font-size: 2.125rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+}
+
+.popular-api-card:last-child a {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #3A85FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popular-api-card-arrow {
+  margin-right: .875rem;
+}
+
+@media (max-width: 1200px) {
+  .popular-api {
+    display: block;
+  }
+  .popular-api-card {
+    display: inline-block;
+    margin: 0 2rem 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
