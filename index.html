@@ -14,14 +14,27 @@
 <body>
     <div class="content">
         <header class="header">
-            <a href="/"><img src="images/logo.png" alt="VTB" class="top-menu-logo"/></a>
+            <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
+            <div class="header-menu">
+                <div class="header-menu-links">
+                    <a href="">Каталог API</a>
+                    <a href="">Подключение</a>
+                    <a href="">Поддержка</a>
+                    <a href="">Блог</a>
+                </div>
+                <div class="header-menu-search-and-login">
+                    <img src="/images/search-icon.svg" alt="" class="search-icon">
+                    <a href="">Регистрация</a>
+                    <a href="">Вход</a>
+                </div>
+            </div>
         </header>
 
         <div class="onboarding-bg blue-bg">
             <div class="container-medium onboarding">
                 <h3>Портал API ВТБ — тестирование и эксплуатация сервисов и данных банка</h3>
                 <h1>Получите доступ к банковским сервисам и используйте их </h1>
-                <button><img src="/images/plus.svg" alt="plus">Подключиться</button>
+                <button><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button>
                 <img class="onboarding-round-letters" src="/images/round_letters.svg" alt="scroll down">
                 <img class="onboarding-arrow" src="/images/arrow-down.png" alt="arrow">
             </div>
@@ -60,10 +73,8 @@
         </div>
 
         <div class="popular-api-bg dark-grey-bg">
-            <div class="container-medium">
-                <div class="title-container">
-                    <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green">< Популярные </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green"> ></h2>
-                </div>
+            <div class="title-container">
+                <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green">< Популярные </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green"> ></h2>
             </div>
             <div class="container-large popular-api">
                 <div class="popular-api-card">
@@ -102,10 +113,8 @@
         </div>
 
         <div class="existing-clients-bg dark-grey-bg">
-            <div class="container-medium">
-                <div class="title-container">
-                    <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green">используют ></h2>
-                </div>
+            <div class="title-container">
+                <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green">используют ></h2>
             </div>
             <div class="container-large existing-clients">
                 <div class="existing-clients-card">
@@ -130,6 +139,7 @@
         </div>
 
         <div class="client-path-bg blue-bg">
+            <!-- <img src="/images/connect-text.png" alt="connnect" class="client-path-connect-text-img"> -->
             <div class="container-medium client-path">
                 <img src="/images/triangle.svg" alt="triangle" class="client-path-triangle">
                 <div class="title-container">
@@ -185,12 +195,136 @@
             </div>
         </div>
 
+        <div class="suppliers-bg dark-grey-bg">
+            <div class="title-container">
+                <h2 class="title-text-neutral title-container-number">05</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">Кого</h2> <h2 class="title-text-green"> подключаем ></h2>
+            </div>
+            <div class="container-large suppliers-list">
+                <img src="/images/decorative-plus-big.svg" alt="decorative plus" class="suppliers-list-plus">
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/government.svg" alt="government">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Государственные органы</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/heart.svg" alt="heart">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Страховые компании</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/subtract.svg" alt="subtract">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Технологические компании</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/megaphone.svg" alt="megaphone">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Лидогенерации</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/chat.svg" alt="chat">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Мессенджеры</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/signal.svg" alt="signal">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Телеком</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/bank.svg" alt="bank">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Банки</h4>
+                </div>
+                <div class="suppliers-list-item">
+                    <div class="suppliers-list-item-icon">
+                        <img src="/images/figures.svg" alt="">
+                    </div>
+                    <h4 class="suppliers-list-item-title">Стартапы</h4>
+                </div>
+            </div>
+            <div class="container-medium become-supplier">
+                <img src="/images/partnership-text.png" alt="partnership" class="become-supplier-partnership-text-img">
+                <div class="become-supplier-text">
+                    <h1>/*Поставщики API </h1>
+                    <p>Хотите сотрудничать с Банком в области данных и API, пишите на почту <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a> или заполните форму обратной связи</p>
+                    <img src="/images/rhombus.svg" alt="rhombus" class="become-supplier-text-rhombus">
+                </div>
+                <div class="become-supplier-form">
+                    <label for="description">Описание</label>
+                    <textarea id="description" class="become-supplier-form-description" rows="5" placeholder="Расскажите, как мы можем сотрудничать"></textarea>
+                    <label for="user-email">Адрес электронной почты для обратной связи</label>
+                    <input type="email" id="user-email" placeholder="Введите адрес почты">
+                    <button class="button-blue button-blue-big" type="submit">Подключиться</button>
+                </div>
+            </div>
+        </div>
 
-        <div class="container-large"></div>
+        <div class="news-bg dark-grey-bg">
+            <div class="title-container">
+                <h2 class="title-text-neutral title-container-number">06</h2> <h2 class="title-text-green">< Новости </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green"> ></h2>
+            </div>
+            <div class="container-large news">
+                <div class="news-cards-wrapper">
+                    <div class="news-card">
+                        <img src="/images/news-picture-1.png" alt="news" class="news-card-picture">
+                        <div class="news-card-text">
+                            <h4>Длинный заголовок новости длинный заголовок новости </h4>
+                            <p class="text-muted">Текст новости подключайте своих сотрудников</p>
+                        </div>
+                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
+                    </div>
+                    <div class="news-card">
+                        <img src="/images/news-picture-2.png" alt="news" class="news-card-picture">
+                        <div class="news-card-text">
+                            <h4>Короткий заголовок новости</h4>
+                            <p class="text-muted">Текст новости подключайте своих сотрудников</p>
+                        </div>
+                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
+                    </div>
+                    <div class="news-card">
+                        <img src="/images/news-picture-3.png" alt="news" class="news-card-picture">
+                        <div class="news-card-text">
+                            <h4>Длинный заголовок новости длинный заголовок новости </h4>
+                            <p class="text-muted">Текст новости подключайте своих</p>
+                        </div>
+                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
+                    </div>
 
-        <div class="container-large"></div>
+                    <div class="news-card">
+                        <h1>Читайте все новости портала</h1>
+                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Перейти в новости</p></a>
+                    </div>                
+                </div>
+                <div class="news-action"><button class="button-blue button-blue-big news-action-button" type="submit"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button></div>
+            </div>
+        </div>
 
-        <footer></footer>
+        <footer class="footer-bg">
+            <div class="footer-logo-wrapper">
+                <a href="/"><img src="images/logo.png" alt="VTB" class="top-menu-logo"/></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
+                    <p>Генеральная лицензия Банка России №1000</p>
+                    <p>© ВТБ, 2021</p>
+                </div>
+                <div class="footer-info-links">
+                    <a href="">Пользовательское соглашение</a>
+                    <a href="">О Банке ВТБ</a>
+                    <a href="">Положение об организации обработки персональных  данных в Банке ВТБ (ПАО)</a>
+                </div>
+            </div>
+            <img src="/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
+        </footer>
     </div>
 </body>
 </html>

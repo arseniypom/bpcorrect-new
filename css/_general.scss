@@ -2,12 +2,13 @@
 $main-font: "VTB Group UI";
 $color-neutral-05: #F3F4F6;
 $color-neutral-30: #B1B5BB;
+$color-neutral-90: #22242A;
 
 body {
     height: 100%;
 }
 
-h1, h2, h3, h4, p, a, li, button, input {
+h1, h2, h3, h4, p, a, li, button, label, input, textarea {
     font-family: $main-font;
     color: inherit;
 }
@@ -52,6 +53,9 @@ p {
 }
 
 .title-container {
+    margin: 6.25rem auto 3.5rem;
+    max-width: 1070px;
+
     h2 {
         display: inline-block;
     }
@@ -122,7 +126,7 @@ p {
 }
 
 .dark-grey-bg {
-    background: #22242A;
+    background: $color-neutral-90;
     color: $color-neutral-05;
     overflow: hidden;
 }
@@ -142,4 +146,8 @@ p {
         padding: .625rem 1.5rem;
         font-size: .875rem;
     }
+}
+
+.plus-button {
+    margin-right: .375rem;
 }

@@ -1,11 +1,23 @@
 /* ----------------------- CLIENT PATH CONTAINER ----------------------- */
 
+.client-path-bg {
+    position: relative;
+}
+
+// .client-path-connect-text-img {
+//     position: absolute;
+//     max-width: 39rem;
+//     top: 4rem;
+//     right: 24.9rem;
+// }
+
 .client-path {
     position: relative;
+    z-index: 3;
 
     &-triangle {
         position: absolute;
-        right: 23.5rem;
+        right: 21rem;
         top: 1rem;
     }
 }
