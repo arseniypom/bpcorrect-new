@@ -25,6 +25,19 @@ body {
   height: 100%;
 }
 
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 h1, h2, h3, h4, p, a, li, button, label, input, textarea {
   font-family: "VTB Group UI";
   color: inherit;
@@ -68,16 +81,6 @@ p {
   color: #B1B5BB;
 }
 
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .title-container {
   margin: 6.25rem auto 3.5rem;
   max-width: 1070px;
@@ -111,6 +114,10 @@ p {
 }
 
 @media (max-width: 1200px) {
+  .title-container {
+    margin: 6.25rem auto 3.5rem;
+    max-width: 970px;
+  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: 970px;
@@ -122,6 +129,10 @@ p {
 }
 
 @media (max-width: 992px) {
+  .title-container {
+    margin: 6.25rem auto 3.5rem;
+    max-width: 750px;
+  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: 750px;
@@ -133,6 +144,10 @@ p {
 }
 
 @media (max-width: 767px) {
+  .title-container {
+    margin: 6.25rem auto 3.5rem;
+    max-width: none;
+  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: none;
@@ -148,12 +163,14 @@ p {
   background-size: cover;
   color: #fff;
   overflow: hidden;
+  width: 100%;
 }
 
 .dark-grey-bg {
   background: #22242A;
   color: #F3F4F6;
   overflow: hidden;
+  width: 100%;
 }
 
 .button-blue {
@@ -163,6 +180,15 @@ p {
   border-radius: 4px;
   border: none;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button-blue-big {
@@ -175,8 +201,121 @@ p {
   font-size: .875rem;
 }
 
+.button-blue:hover {
+  background-color: #0142D3;
+}
+
+.button-blue:active {
+  background-color: #022D9A;
+}
+
+.button-blue:focus {
+  outline: none;
+}
+
+.button-transparent {
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button-transparent:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.button-transparent:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-transparent:focus {
+  outline: none;
+}
+
 .plus-button {
   margin-right: .375rem;
+}
+
+.cookie-banner {
+  max-width: 1008px;
+  background-color: rgba(2, 45, 154, 0.95);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem;
+}
+
+.cookie-banner-img {
+  max-width: 6.25rem;
+}
+
+.cookie-banner-text {
+  margin: 0 1rem 0 .875rem;
+}
+
+.cookie-banner-text p {
+  color: #ffffff;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.cookie-banner-text p:last-child {
+  margin-top: .75rem;
+}
+
+.cookie-banner button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+}
+
+.close-button {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  right: .75rem;
+  top: .75rem;
+  border: none;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.agree-button {
+  padding: .625rem 1.5rem;
+  color: #ffffff;
+  font-size: .875rem;
+  font-weight: 500;
 }
 
 /* ----------------------- HEADER ----------------------- */
@@ -192,7 +331,11 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
 }
 
 .header-logo {
@@ -254,6 +397,14 @@ p {
   font-weight: 600;
 }
 
+.hide {
+  top: -70px;
+}
+
+.bg-color {
+  background-color: #0062FF;
+}
+
 /* ----------------------- ONBOARDING CONTAINER ----------------------- */
 .onboarding-bg {
   width: 100%;
@@ -285,18 +436,7 @@ p {
 }
 
 .onboarding button {
-  color: inherit;
-  font-weight: 500;
   padding: 1rem 2rem;
-  border: 1px solid #FFFFFF;
-  border-radius: 4px;
-  background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .onboarding-round-letters {
@@ -338,13 +478,30 @@ p {
           justify-content: space-between;
 }
 
-.target-audience-section img {
+.target-audience-section .decorative-img {
   max-width: 29rem;
 }
 
 .target-audience-section-info {
   width: 30.5rem;
   position: relative;
+  z-index: 0;
+}
+
+.target-audience-section-info-developers-text-img {
+  position: absolute;
+  max-width: 53.75rem;
+  top: -3.75rem;
+  right: -10rem;
+  z-index: -1;
+}
+
+.target-audience-section-info-business-text-img {
+  position: absolute;
+  max-width: 43.75rem;
+  top: -4rem;
+  left: -9.8rem;
+  z-index: -1;
 }
 
 .target-audience-section-info h1 {
@@ -384,11 +541,8 @@ p {
 }
 
 .target-audience-section-info-bullets .connect-instruction {
+  color: #3A85FF;
   text-decoration: underline;
-}
-
-.target-audience-section-info-bullets .connect-instruction:hover {
-  color: #fff;
 }
 
 /* ----------------------- POPULAR API CONTAINER ----------------------- */
@@ -396,13 +550,13 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .popular-api-card {
@@ -473,7 +627,9 @@ p {
 
 @media (max-width: 1200px) {
   .popular-api {
-    display: block;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .popular-api-card {
     display: inline-block;
@@ -486,15 +642,25 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .existing-clients {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .existing-clients-card {
+    margin: 0 .5rem 1rem;
+  }
 }
 
 .existing-clients-card {
@@ -852,8 +1018,10 @@ p {
 }
 
 @media (max-width: 1200px) {
-  .news {
-    display: block;
+  .news-cards-wrapper {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .news-card {
     display: inline-block;
@@ -872,6 +1040,7 @@ p {
           align-items: flex-start;
   padding: 3.75rem 7rem 4.25rem 2rem;
   position: relative;
+  width: 100%;
 }
 
 .footer-info {

@@ -6,7 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    // top: -70px;
+    transition: top 0.2s ease-in-out;
 
     &-logo {
         max-width: 7rem;
@@ -53,4 +57,11 @@
             }
         }
     }
+}
+
+.hide {
+    top: -70px;
+}
+.bg-color {
+    background-color: #0062FF;
 }

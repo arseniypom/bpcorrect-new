@@ -7,13 +7,33 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    img {
+    .decorative-img {
         max-width: 29rem;
     }
+
+    
 
     &-info {
         width: 30.5rem;
         position: relative;
+        z-index: 0;
+
+        &-developers-text-img {
+            position: absolute;
+            max-width: 53.75rem;
+            top: -3.75rem;
+            right: -10rem;
+
+            z-index: -1;
+        }
+        &-business-text-img {
+            position: absolute;
+            max-width: 43.75rem;
+            top: -4rem;
+            left: -9.8rem;
+
+            z-index: -1;
+        }
 
         h1 {
             margin-bottom: 1.5rem;
@@ -49,10 +69,8 @@
         }
 
         .connect-instruction {
+            color: #3A85FF;
             text-decoration: underline;
-        }
-        .connect-instruction:hover {
-            color: #fff;
         }
     }
 }
