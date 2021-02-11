@@ -1,347 +1,410 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ВТБ API</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- CSS -->
-    <!-- reset -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- custom styles -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169389560-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169389560-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BPCorrect</title>
+  <link rel="icon" href="images/icon.ico">
+
+  <!-- CSS Stylesheets (bootstrap & own) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/nullstyle.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Icofont -->
+  <link rel="stylesheet" href="icofont/icofont.min.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bcc546957c.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="content">
+  <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">   
+    <a class="navbar-brand" href="#">
+      <img src="images/stevara_logo.png" class="logo_img" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="cookie-banner">
-            <img src="/images/cookie-image.svg" alt="cookie" class="cookie-banner-img">
-            <div class="cookie-banner-text">
-                <p>Наш сайт использует файлы cookie и аналогичные технологии для сбора данных пользователей сайта в целях обеспечения полноценного функционирования сайта, улучшения работы сайта, формирования статистических исследований и обзоров. На сайте используется сервис Яндекс.Метрика. </p>
-                <p>Обработка файлов cookie осуществляется в соответствии с <a>Пользовательским соглашением сайта</a></p>
-            </div>
-            <button class="button-transparent agree-button">Отлично</button>
-            <button onclick="closeCookieBanner()" class="close-button"><img src="/images/cross.svg" alt="cross"></button>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link colored_link" href="#intro"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#for_patients">Patients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#howworks">Healthcare Professionals</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
+            <a class="dropdown-item" href="https://learn.bpcorrect.com/">Blog</a>
+            <a class="dropdown-item" href="https://learn.bpcorrect.com/faq/">FAQ</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Clinical Portal
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownPortal">
+            <a class="dropdown-item" href="https://learn.bpcorrect.com/register">Plans and Registration</a>
+            <a class="dropdown-item" href="https://admin.bpcorrect.com/user/login">Login</a>
+          </div>
+        </li>
+
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>-->
+        <!-- <<<<<<< HEAD -->
+       
         
-        <header class="header" id="navbar">
-            <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
-            <div class="header-menu">
-                <div class="header-menu-links">
-                    <a href="">Каталог API</a>
-                    <a href="">Подключение</a>
-                    <a href="">Поддержка</a>
-                    <a href="">Блог</a>
-                </div>
-                <div class="header-menu-search-and-login">
-                    <img src="/images/search-icon.svg" alt="" class="search-icon">
-                    <a href="">Регистрация</a>
-                    <a href="">Вход</a>
-                </div>
-            </div>
-        </header>
-
-        <div class="onboarding-bg blue-bg">
-            <div class="container-medium onboarding">
-                <h3>Портал API ВТБ — тестирование и эксплуатация сервисов и данных банка</h3>
-                <h1>Получите доступ к банковским сервисам и используйте их </h1>
-                <button class="button-transparent"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button>
-                <img class="onboarding-round-letters" src="/images/round_letters.svg" alt="scroll down">
-                <img class="onboarding-arrow" src="/images/arrow-down.png" alt="arrow">
-            </div>
-        </div>
-
-        <div class="target-audience-bg dark-grey-bg">
-            <div class="container-medium target-audience">
-                <div class="title-container">
-                    <h2 class="title-text-neutral title-container-number">01</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">Кому</h2> <h2 class="title-text-green">полезны API ></h2>
-                </div>
-                <div class="target-audience-section">
-                    <img class="decorative-img decorative-img-1" src="/images/decorative-1.png" alt="decorative 1">
-                    <div class="target-audience-section-info">
-                        <img src="/images/developers-text.png" alt="developers" class="target-audience-section-info-developers-text-img">
-                        <h1>/* Разработчикам</h1>
-                        <ul class="target-audience-section-info-bullets">
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Доступные данные <p class="text-muted">— встраивайте данные банка в ваши приложения и тестируйте открытые API, используя подробную <a class="connect-instruction" href="">инструкцию</a></p></div></li>
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Swagger-файлы <p class="text-muted">— получите доступ к библиотеке  swagger-файлов как в тестовом режиме, так и при подписке на уникальные API</p></div></li>
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Бесшовность <p class="text-muted">— оцените незаметный переход из одной системы в другую</p></div></li>
-                        </ul>
-                        <img class="target-audience-section-info-triangle" src="/images/triangle.svg" alt="triangle">
-                    </div>
-                </div>
-                <div class="target-audience-section">
-                    <div class="target-audience-section-info">
-                        <img src="/images/business-text.png" alt="business" class="target-audience-section-info-business-text-img">
-                        <h1>/* Бизнесу</h1>
-                        <ul class="target-audience-section-info-bullets">
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные про-дукты и предоставляйте лучший сервис своим клиентам</p></div></li>
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Контроль, делегирование и аналитика <p class="text-muted">— подключайте своих сотрудников к API, следите за количеством вызовов, контролируйте ваши действия в личном кабинете</p></div></li>
-                            <li><img src="/images/li-marker.png" alt="li marker"><div>Простота и надежность <p class="text-muted">— регистрация для тестовых API или заявка на подключение к уникальным API занимает не больше минуты, а гарантия безопасной передачи данных и  шифрования по ГОСТу стопроцентное</p></div></li>
-                        </ul>
-                        <img class="target-audience-section-info-plus" src="/images/decorative-plus-big.svg" alt="plus">
-                    </div>
-                    <img class="decorative-img decorative-img-2" src="/images/decorative-2.png" alt="decorative 2">
-                </div>
-            </div>
-        </div>
-
-        <div class="popular-api-bg dark-grey-bg">
-            <div class="title-container">
-                <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green">< Популярные </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green"> ></h2>
-            </div>
-            <div class="container-large popular-api">
-                <div class="popular-api-card">
-                    <img src="/images/popular-api-icon-1.svg" alt="" class="popular-api-card-icon">
-                    <div class="popular-api-card-text">
-                        <h4>Ипотечный калькулятор ВТБ</h4>
-                        <p>Контроль, делегирование и аналитика</p>
-                        <p class="text-muted"> — подключайте своих сотрудников к тестированию API</p>
-                    </div>
-                    <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
-                </div>
-                <div class="popular-api-card">
-                    <img src="/images/popular-api-icon-2.svg" alt="" class="popular-api-card-icon">
-                    <div class="popular-api-card-text">
-                        <h4>Карта жителя Кузбаса</h4>
-                        <p>Бесплатное тестирование API</p>
-                        <p class="text-muted"> — тестируйте приложения с использованием открытых данных</p>
-                    </div>
-                    <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
-                </div>
-                <div class="popular-api-card">
-                    <img src="/images/popular-api-icon-3.svg" alt="" class="popular-api-card-icon">
-                    <div class="popular-api-card-text">
-                        <h4>ВТБ Мобайл</h4>
-                        <p>Поддержка</p>
-                        <p class="text-muted"> — команда ВТБ всегда на связи api@vtb.ru, консультационная и техническая помощь
-                        </p>
-                    </div>
-                    <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
-                </div>
-                <div class="popular-api-card">
-                    <h1>Смотреть больше API</h1>
-                    <a href=""><img src="/images/arrow-right.svg" alt="arrow" class="popular-api-card-arrow"><p>Перейти в каталог</p></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="existing-clients-bg dark-grey-bg">
-            <div class="title-container">
-                <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green">используют ></h2>
-            </div>
-            <div class="container-large existing-clients">
-                <div class="existing-clients-card">
-                    <div class="existing-clients-card-body">
-                        <img src="/images/magnit-logo.png" alt="magnit shop logo" class="existing-clients-card-body-logo-magnit">
-                    </div>
-                    <h4 class="existing-clients-card-title">Сеть магазинов МАГНИТ</h4>
-                </div>
-                <div class="existing-clients-card">
-                    <div class="existing-clients-card-body">
-                        <img src="/images/fns-logo.png" alt="fns logo" class="existing-clients-card-body-logo-fns">
-                    </div>
-                    <h4 class="existing-clients-card-title">Федеральная налоговая служба Российской Федерации</h4>
-                </div>
-                <div class="existing-clients-card">
-                    <div class="existing-clients-card-body">
-                        <img src="/images/sogaz-logo.png" alt="sogaz logo" class="existing-clients-card-body-logo-sogaz">
-                    </div>
-                    <h4 class="existing-clients-card-title">Страховая компания СОГАЗ-ЖИЗНЬ</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-path-bg blue-bg">
-            <!-- <img src="/images/connect-text.png" alt="connnect" class="client-path-connect-text-img"> -->
-            <div class="container-medium client-path">
-                <img src="/images/triangle.svg" alt="triangle" class="client-path-triangle">
-                <div class="title-container">
-                    <h2 class="title-text-neutral title-container-number">04</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">Как</h2> <h2 class="title-text-green"> подключиться ></h2>
-                </div>
-                <div class="client-path-steps upper-steps-div">
-                    <div class="client-path-steps-item">
-                        <img src="/images/step-1.png" alt="step 1" class="step-number-img step-number-img-first">
-                        <div class="client-path-steps-item-number">
-                            <p>/* step</p>
-                            <p>01</p>
-                        </div>
-                        <h4>Посетить портал разработчиков developer.vtb.ru</h4>
-                    </div>
-                    <div class="client-path-steps-item">
-                        <img src="/images/step-3.png" alt="step 3" class="step-number-img">
-                        <div class="client-path-steps-item-number">
-                            <p>/* step</p>
-                            <p>03</p>
-                        </div>
-                        <h4>Найти и протестировать нужные API</h4>
-                    </div>
-                    <div class="client-path-steps-item">
-                        <img src="/images/step-5.png" alt="step 5" class="step-number-img">
-                        <div class="client-path-steps-item-number">
-                            <p>/* step</p>
-                            <p>05</p>
-                        </div>
-                        <h4>Использовать API в своих разработках</h4>
-                    </div>
-                </div>
-                <div class="client-path-timeline">
-                    <img src="/images/timeline.svg" alt="timeline">
-                </div>
-                <div class="client-path-steps">
-                    <div class="client-path-steps-item">
-                        <img src="/images/step-2.png" alt="step 2" class="step-number-img">
-                        <div class="client-path-steps-item-number">
-                            <p>/* step</p>
-                            <p>02</p>
-                        </div>
-                        <h4>Зарегистрироваться на портале разработчиков</h4>
-                    </div>
-                    <div class="client-path-steps-item">
-                        <img src="/images/step-4.png" alt="step 4" class="step-number-img">
-                        <div class="client-path-steps-item-number">
-                            <p>/* step</p>
-                            <p>04</p>
-                        </div>
-                        <h4>Заключить договор на информационное взаимодействие</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="suppliers-bg dark-grey-bg">
-            <div class="title-container">
-                <h2 class="title-text-neutral title-container-number">05</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">Кого</h2> <h2 class="title-text-green"> подключаем ></h2>
-            </div>
-            <div class="container-large suppliers-list">
-                <img src="/images/decorative-plus-big.svg" alt="decorative plus" class="suppliers-list-plus">
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/government.svg" alt="government">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Государственные органы</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/heart.svg" alt="heart">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Страховые компании</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/subtract.svg" alt="subtract">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Технологические компании</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/megaphone.svg" alt="megaphone">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Лидогенерации</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/chat.svg" alt="chat">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Мессенджеры</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/signal.svg" alt="signal">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Телеком</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/bank.svg" alt="bank">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Банки</h4>
-                </div>
-                <div class="suppliers-list-item">
-                    <div class="suppliers-list-item-icon">
-                        <img src="/images/figures.svg" alt="">
-                    </div>
-                    <h4 class="suppliers-list-item-title">Стартапы</h4>
-                </div>
-            </div>
-            <div class="container-medium become-supplier">
-                <img src="/images/partnership-text.png" alt="partnership" class="become-supplier-partnership-text-img">
-                <div class="become-supplier-text">
-                    <h1>/*Поставщики API </h1>
-                    <p>Хотите сотрудничать с Банком в области данных и API, пишите на почту <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a> или заполните форму обратной связи</p>
-                    <img src="/images/rhombus.svg" alt="rhombus" class="become-supplier-text-rhombus">
-                </div>
-                <div class="become-supplier-form">
-                    <label for="description">Описание</label>
-                    <textarea id="description" class="become-supplier-form-description" rows="5" placeholder="Расскажите, как мы можем сотрудничать"></textarea>
-                    <label for="user-email">Адрес электронной почты для обратной связи</label>
-                    <input type="email" id="user-email" placeholder="Введите адрес почты">
-                    <button class="button-blue button-blue-big" type="submit">Подключиться</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="news-bg dark-grey-bg">
-            <div class="title-container">
-                <h2 class="title-text-neutral title-container-number">06</h2> <h2 class="title-text-green">< Новости </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green"> ></h2>
-            </div>
-            <div class="container-large news">
-                <div class="news-cards-wrapper">
-                    <div class="news-card">
-                        <img src="/images/news-picture-1.png" alt="news" class="news-card-picture">
-                        <div class="news-card-text">
-                            <h4>Длинный заголовок новости длинный заголовок новости </h4>
-                            <p class="text-muted">Текст новости подключайте своих сотрудников</p>
-                        </div>
-                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
-                    </div>
-                    <div class="news-card">
-                        <img src="/images/news-picture-2.png" alt="news" class="news-card-picture">
-                        <div class="news-card-text">
-                            <h4>Короткий заголовок новости</h4>
-                            <p class="text-muted">Текст новости подключайте своих сотрудников</p>
-                        </div>
-                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
-                    </div>
-                    <div class="news-card">
-                        <img src="/images/news-picture-3.png" alt="news" class="news-card-picture">
-                        <div class="news-card-text">
-                            <h4>Длинный заголовок новости длинный заголовок новости </h4>
-                            <p class="text-muted">Текст новости подключайте своих</p>
-                        </div>
-                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
-                    </div>
-
-                    <div class="news-card">
-                        <h1>Читайте все новости портала</h1>
-                        <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Перейти в новости</p></a>
-                    </div>                
-                </div>
-                <div class="news-action"><button class="button-blue button-blue-big news-action-button" type="submit"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button></div>
-            </div>
-        </div>
-
-        <footer class="footer-bg">
-            <!-- <div class="footer-logo-wrapper"> -->
-                <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
-            <!-- </div> -->
-            <div class="footer-info">
-                <div class="footer-info-text">
-                    <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
-                    <p>Генеральная лицензия Банка России №1000</p>
-                    <p>© ВТБ, 2021</p>
-                </div>
-                <div class="footer-info-links">
-                    <a href="">Пользовательское соглашение</a>
-                    <a href="">О Банке ВТБ</a>
-                    <a href="">Положение об организации обработки персональных  данных в Банке ВТБ (ПАО)</a>
-                </div>
-            </div>
-            <img src="/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
-        </footer>
-
-        <!-- SCRIPTS -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="/scripts/script.js"></script>
+        <!-- >>>>>>> footer -->
+      </ul>
     </div>
+  </nav>
+
+  <section class="intro_section" id="intro">
+    <div class="row">
+      <div class="col-xl-7 intro_column1">
+        <h1 class="main_header">A scientifically based solution for monitoring blood
+          pressure in the safety and privacy of your home
+        </h1>
+
+        <a href="https://www.youtube.com/watch?v=0tROmDFmLtA" data-youtube-id="0tROmDFmLtA" href="#" class="cta js-trigger-video-modal">
+          <span>Watch The Video</span>
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+      </div>
+      <div class="col-xl-5 intro_column2">
+        <img src="images/woman-bp.png" alt="" class="intro_img">
+      </div>
+    </div>
+  </section>
+
+  <!-- video modal -->
+  <section class="video-modal">
+
+    <!-- Modal Content Wrapper -->
+    <div id="video-modal-content" class="video-modal-content">
+
+      <!-- iframe -->
+      <iframe id="youtube" width="100%" height="100%" frameborder="0" allow="autoplay" allowfullscreen src=></iframe>
+
+      <a href="#" class="close-video-modal">
+        <!-- X close video icon -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" width="24" height="24">
+
+          <g id="icon-x-close">
+            <path fill="#ffffff"
+              d="M30.3448276,31.4576271 C29.9059965,31.4572473 29.4852797,31.2855701 29.1751724,30.980339 L0.485517241,2.77694915 C-0.122171278,2.13584324 -0.104240278,1.13679247 0.52607603,0.517159487 C1.15639234,-0.102473494 2.17266813,-0.120100579 2.82482759,0.477288136 L31.5144828,28.680678 C31.9872448,29.1460053 32.1285698,29.8453523 31.8726333,30.4529866 C31.6166968,31.0606209 31.0138299,31.4570487 30.3448276,31.4576271 Z"
+              id="Shape"></path>
+            <path fill="#ffffff"
+              d="M1.65517241,31.4576271 C0.986170142,31.4570487 0.383303157,31.0606209 0.127366673,30.4529866 C-0.12856981,29.8453523 0.0127551942,29.1460053 0.485517241,28.680678 L29.1751724,0.477288136 C29.8273319,-0.120100579 30.8436077,-0.102473494 31.473924,0.517159487 C32.1042403,1.13679247 32.1221713,2.13584324 31.5144828,2.77694915 L2.82482759,30.980339 C2.51472031,31.2855701 2.09400353,31.4572473 1.65517241,31.4576271 Z"
+              id="Shape"></path>
+          </g>
+
+        </svg>
+      </a>
+
+    </div><!-- end modal content wrapper -->
+
+
+    <!-- clickable overlay element -->
+    <div class="overlay"></div>
+
+
+  </section>
+  <!-- end video modal -->
+
+  <section class="for_patients_section" id="for_patients">
+    <h2>Patients</h2>
+    <div class=" app_row">
+      <div class="col-md-6 offset-md-3 offset-sm-0">
+        <div class="card for_patients_card">
+          <p>Blood pressure measured in the doctor’s office is not always
+            accurate. And these days, monitoring your blood pressure in the safety and privacy of your home may be
+ more preferable to going to a doctor's office. Experts agree that checking your blood pressure at home in
+            the morning and in the evening for 7 days in a row is the best way to
+            determine your true blood pressure. The BPCorrect app helps you do that by:</p>
+          <ul class="for_patiens_list">
+            <li>Connecting to affordable and accurate home blood pressure monitors</li>
+            <li>Providing step-by-step instructions on how to correctly measure blood pressure</li>
+            <li>Reminding you to check your blood pressure for 7 days in a row</li>
+            <li>Summarizing your results</li>
+            <li>Providing links to information about managing your blood pressure</li>
+            <li>Allowing you to share your blood pressure measurements with your doctor</li>
+          </ul>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="monitors_section" id="monitors">
+    <div class="">
+      <!-- <img src="images/woman-bp.png" alt="" class="app_img"> -->
+      <p class="monitors_p">The BPCorrect app works with the following validated and accurate
+        home blood pressure monitors (*must be purchased separately):</p>
+      <div class="row monitors2">
+        <div class="col-md-12 col-lg-3 monitor_example"><a target="_blank" href="https://www.amazon.com/gp/product/B00MXTE7CS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MXTE7CS&linkCode=as2&tag=bpcorrect-20&linkId=896cd10a295efae9b5394d8ca1538c77"><img src="//ir-na.amazon-adsystem.com/e/ir?t=bpcorrect-20&l=am2&o=1&a=B00MXTE7CS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /><img src="images/A&D-UA-651-BLE.jpg" alt="" class="monitor_img"> A&D UA 651 BLE</a>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.com/gp/product/B07RYBKNC2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07RYBKNC2&linkCode=as2&tag=bpcorrect-20&linkId=4ce07e6452c27af7f33afedf04acdd16"><img src="images/Omron-BP5250.jpg" alt="" class="monitor_img"> Omron BP5250</a>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.com/gp/product/B01MRL790Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MRL790Q&linkCode=as2&tag=bpcorrect-20&linkId=c82d81fc736f6591f590293517a5c71d"><img src="images/Omron-Evolv.jpg" alt="" class="monitor_img"> Omron Evolv</a>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.in/Omron-Smart-Elite-Intellisense-Connectivity/dp/B075SL657Z"><img src="images/Omron HEM-7600T.jpg" alt="" class="monitor_img"> Omron HEM-7600T (available in India)</a>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.in/gp/product/B089GL9T96/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1"><img src="images/Omron HEM 7361T.jpg" alt="" class="monitor_img"> Omron HEM 7361T (available in India)</a>
+        </div>
+       
+      </div>
+
+      <div class="download">
+        <h3><strong>Now available on the Apple App Store and the Google Play Store</strong></h3>
+        <div class="row">
+          <a target="_blank" href="https://apps.apple.com/us/app/id1494193645" class="col-md-6"><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt=""></a>
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=arya.bpcorrect" class="col-md-6"><img src="images/google-play-badge.png" alt=""></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="patient_why_section" id="patient_why">
+    <div class="middle_div">
+      <h3 class="middle_h3">Why People Choose <span>BPCorrect</span>?</h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/AHA_logo.png" alt="" class="organisation_logo"></div>
+          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/uspstf_logo.png" alt="" class="organisation_logo"></div>
+          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/MH_logo.png" alt="" class="organisation_logo"></div>
+        </div>
+        <div class="col-sm-6 right_column">
+          <p class="middle_p">The <strong>American Heart Association (AHA)</strong>, the <strong>United States
+              Preventive Services Task Force</strong> and the <strong>Million Hearts Initiative</strong> all
+            recommend home blood pressure monitoring prior to the diagnosis of
+            hypertension and for its management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="howworks_section" id="howworks">
+    <div class="howworks_desc">
+      <h2 class="howworks_h2">Healthcare Professionals</h2>
+      <p class="howworks p">A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-lg-2 offset-lg-3">
+        <div class="card">
+          <div class="round"><img src="images/begin1.png" alt="" class="step_icon">
+            <div class="number">
+              <h2>1</h2>
+            </div>
+          </div>
+          <p class="step_name">Mobile App</p>
+          <p class="step_desc">Connects to validated BP monitors and instructs patients to accurately monitor BP</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card">
+          <div class="round"><img src="images/begin2.png" alt="" class="step_icon">
+            <div class="number">
+              <h2>2</h2>
+            </div>
+          </div>
+          <p class="step_name">Clinician Portal</p>
+          <p class="step_desc">Provides summaries of patients’ BP measurements</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="card">
+          <div class="round"><img src="images/begin3.png" alt="" class="step_icon">
+            <div class="number">
+              <h2>3</h2>
+            </div>
+          </div>
+          <p class="step_name">Complete Remote Monitoring Platform</p>
+          <p class="step_desc">Engaged patients and improved management of hypertension</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mobile_app_section" id="patient_app">
+    <div class="row app_row">
+      <div class="col-md-6 picture_col">
+        <img src="images/img1.png" alt="" class="app_img">
+      </div>
+      <div class="col-md-6">
+        <h2>The BPCorrect App</h2>
+        <ul class="features_list">
+          <li> Integrates with clinically validated, affordable home BP monitors</li>
+          <li> Includes a 7-day BP monitoring period recommended by the AHA </li>
+          <li> Reminds patients when BP measurements are due</li>
+          <li> Using video and text, provides step-by-step patient instructions for BP measurement </li>
+          <li> Includes timers for the appropriate rest intervals before and between BP measurements </li>
+          <li> Aggregates BP values and displays summaries for patients</li>
+          <li> De-emphasizes focus on individual measurements </li>
+          <li> Incorporates lifestyle education to lower BP </li>
+          <li> Sends all BP measures to the HIPAA-secure BPCorrect Clinician Portal </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="portal_section" id="portal">
+    <div class="row app_row">
+      <div class="col-md-6">
+        <h2>The BPCorrect Clinician Portal</h2>
+        <p class="availability_par"><b>Now Available</b></p>
+        <p class="availability_par"><b>Choose a plan that works best for your practice</b>
+        <p class="availability_par"><b>Free for up to 3 patients</b>
+        <ul class="features_list">
+          <li> Provides reports on individual patient’s progress on obtaining sufficient measurements to determine an accurate assessment of the patient’s blood pressure</li>
+          <li> Displays the average blood pressure value and its interpretation based on AHA guidelines once a sufficient number of measurements have been obtained</li>
+          <li> Includes a dashboard highlighting patients with average blood pressures outside of range</li>
+          <li> Includes ability to create accounts for clinical staff members to review blood pressure measurements</li>
+          <li> Includes timer to record time spent per patient to facilitate billing using remote monitoring codes (CPT 99453, 99454, 99457, 99458)</li>
+        </ul>
+      </div>
+      <div class="col-md-6 picture_col">
+        <img src="images/laptop-img.png" alt="" class="app_img">
+      </div>
+    </div>
+  </section>
+
+  <section class="monitors_section" id="monitors">
+    <div>
+      <!-- <img src="images/woman-bp.png" alt="" class="app_img"> -->
+      <p class="monitors_p">The BPCorrect app works with the following validated and accurate
+        home blood pressure monitors:</p>
+      <div class="row monitors2">
+        <div class="col-lg-3 monitor_example">
+          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B00MXTE7CS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MXTE7CS&linkCode=as2&tag=bpcorrect-20&linkId=896cd10a295efae9b5394d8ca1538c77"><img src="images/A&D-UA-651-BLE.jpg" alt="" class="monitor_img"> A&D UA 651 BLE</a></div>
+        </div>
+        <div class="col-lg-3 monitor_example">
+          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B07RYBKNC2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07RYBKNC2&linkCode=as2&tag=bpcorrect-20&linkId=4ce07e6452c27af7f33afedf04acdd16"><img src="images/Omron-BP5250.jpg" alt="" class="monitor_img"> Omron BP5250</a></div>
+        </div>
+        <div class="col-lg-3 monitor_example">
+          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B01MRL790Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MRL790Q&linkCode=as2&tag=bpcorrect-20&linkId=c82d81fc736f6591f590293517a5c71d"><img src="images/Omron-Evolv.jpg" alt="" class="monitor_img"> Omron Evolv</a></div>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.in/Omron-Smart-Elite-Intellisense-Connectivity/dp/B075SL657Z"><img src="images/Omron HEM-7600T.jpg" alt="" class="monitor_img"> Omron HEM-7600T (available in India)</a>
+        </div>
+        <div class="col-sm-12 col-lg-3 monitor_example">
+          <a target="_blank" href="https://www.amazon.in/gp/product/B089GL9T96/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1"><img src="images/Omron HEM 7361T.jpg" alt="" class="monitor_img"> Omron HEM 7361T (available in India)</a>
+        </div>
+
+      <div class="plus"><i class="icofont-plus-circle"></i>
+        <p>Preferred pricing may be available, please contact BPCorrect for more details.<p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about_section" id="about">
+    <div class="about_div">
+      <h2>About Us</h2>
+      <p>BPCorrect was created by Dr. Cara Litvin, a general internist, and Dr. Steven Ornstein, a family physician. Drs. Litvin and Ornstein have conducted numerous NIH and AHRQ funded studies focused on improving the diagnosis and management of
+        chronic diseases in primary care settings. The BPCorrect platform evolves directly from their many years of research and clinical experience.</p>
+    </div>
+    <div class="sign_up_mail_div">
+      <!-- Begin Mailchimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+
+      <div id="mc_embed_signup">
+        <form action="https://bpcorrect.us4.list-manage.com/subscribe/post?u=3a779614b6082f18e0aa7c744&amp;id=779b619837" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">Sign up to receive BPCorrect updates</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3a779614b6082f18e0aa7c744_779b619837" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container_footer">
+      <img src="images/HIPAA.png" alt="" class="footer_hipaa">
+      <div class="footer_links">
+        <div class="footer_links_column">
+          <p class="footer_links_column_header"><strong>Resources</strong></p>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/">Blog</a>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/faq/">FAQ</a>
+        </div>
+        <div class="footer_links_column">
+          <p class="footer_links_column_header"><strong>Clinical Portal</strong></p>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/register">Plans and Registration</a>
+          <a class="footer_links_column_link" href="https://admin.bpcorrect.com/user/login">Login</a>
+        </div>
+        <div class="footer_links_column">
+          <p class="footer_links_column_header"><strong>Terms</strong></p>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/privacy-policy/">Privacy Policy</a>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/terms-and-conditions/">Terms and conditions</a>
+        </div>
+        <!-- <div class="policy-and-mail">
+          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/privacy-policy/">Privacy Policy</a>
+          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/terms-and-conditions/">Terms and conditions</a>
+          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/register/">Register (for clinicians)</a>
+          <a class="policy-and-mail__link" href="https://admin.bpcorrect.com/user/login">BPCorrect Clinican Portal (for registered clinicians)</a>
+          <a class="policy-and-mail__link" href="mailto:info@bpcorrect.com"><i class="fas fa-at"></i>info@bpcorrect.com</a>
+        </div> -->
+      </div>
+      <div class="social_media">
+        <a class="social-media_link" href="https://twitter.com/BpCorrect" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="social-media_link" href="https://www.facebook.com/BPCorrect/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="social-media_link" href="https://www.linkedin.com/company/30130085" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>Copyright © 2021 Stevara, LLC. All rights reserved.</p>
+    </div>
+  </section>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Файл JS скриптов -->
+  <script src="js/script.js"></script>
+  <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9336792.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </body>
+
 </html>
