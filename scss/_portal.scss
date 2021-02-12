@@ -1,0 +1,15 @@
+
+/* PORTAL STYLES --------------------------------------------------------------------- */
+.portal_section {
+    padding: 2rem 0 1rem;
+}
+  
+.availability_par {
+    text-align: center;
+}
+  
+@media (max-width: 768px) {
+    .portal_section {
+      padding: 1rem 0;
+    }
+}

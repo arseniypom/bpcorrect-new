@@ -1,0 +1,147 @@
+/* CARDS STYLES ------------------------------------------------------------------ */
+.cards {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 4rem 1rem;
+
+  &-title {
+    margin: 2rem 0;
+    max-width: 40rem;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.cards-wrapper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 20rem;
+  margin-right: 2rem;
+
+  padding: 1.8rem 1.8rem 1.4rem;
+  transition: all 0.4s ease;
+
+  border: 1px solid #eaeaea;
+  border-radius: 7px;
+
+  &-image {
+    img {
+      max-width: 3rem;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+
+/* HOW WORKS STYLES ------------------------------------------------------------------ */
+.howworks_section {
+  width: 100%;
+  height: auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  background-image: url('../images/line-begin.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+.howworks_desc {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 47rem;
+}
+
+.howworks_section .card {
+  border: none;
+  background: none;
+}
+
+.round {
+  width: 8rem;
+  height: 8rem;
+  background-color: #8bc43f;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+
+.round:hover {
+  width: 8.5rem;
+  height: 8.5rem;
+  -webkit-box-shadow: 8px 14px 21px -6px #32b6a1;
+  box-shadow: 8px 14px 21px -7px #32b6a1;
+}
+
+.round img {
+  width: 100%;
+  max-width: 4rem;
+}
+
+.number {
+  font-weight: bold;
+  color: #32b6a1;
+  position: absolute;
+  bottom: -.5rem;
+  left: -.5rem;
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border: .1rem solid #32b6a1;
+  border-radius: 50%;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step_name {
+  font-weight: bold;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .round {
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .howworks_section {
+    padding: 2rem 1rem;
+    background-image: none;
+  }
+
+  .round img {
+    width: 100%;
+    max-width: 3rem;
+  }
+
+  .step_name {
+    height: 2.5rem;
+  }
+}

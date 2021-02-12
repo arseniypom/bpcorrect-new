@@ -1,0 +1,79 @@
+
+/* ADVANTAGES STYLES -------------------------------------------------------- */
+.patient_why_section {
+  background-image: url(../images/about-hafl-bg1.jps);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 15rem;
+  padding: 3rem;
+}
+
+.middle_div {
+  max-width: 50rem;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.middle_h3 {
+  color: #32b6a1;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.middle_h3 span {
+  color: #8bc43f;
+}
+
+.organisation {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.organisation i {
+  font-size: 2.5rem;
+  color: #8bc43f;
+}
+
+.organisation_logo {
+  width: 100%;
+  max-width: 14rem;
+  margin-left: .5rem;
+}
+
+.right_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle_p {
+  line-height: 1.7rem;
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  .patient_why_section {
+    padding: 2rem 1rem;
+  }
+
+  .organisation_logo {
+    max-width: 9rem;
+  }
+}
+
+@media (max-width: 424px) {
+  .organisation_logo {
+    max-width: 7rem;
+  }
+
+  .middle_p {
+    line-height: 1.3rem;
+    font-size: .8rem;
+    text-align: justify;
+  }
+}

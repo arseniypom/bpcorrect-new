@@ -1,0 +1,165 @@
+/* FOOTER STYLES ---------------------------------------------------------------------- */
+.container_footer {
+    color: #fff;
+    background-color: #24292e;
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer_hipaa {
+    max-width: 25rem;
+  }
+  
+  .footer_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  
+  .footer_links_column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 1.5rem 0;
+  }
+  
+  .footer_links_column_header {
+    margin-bottom: .5rem;
+  }
+  
+  .footer_links_column_link:hover {
+    text-decoration: none;
+    color: #8bc43f;
+  }
+  
+  .social_media {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  .social_media p {
+    margin-bottom: .8rem;
+  }
+  
+  .footer_img {
+    margin-right: 1rem;
+  }
+  
+  .social_media i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.08rem solid #fff;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin: 0 .3rem
+  }
+  
+  .social_media i:hover {
+    color: #8bc43f;
+    border-color: #8bc43f;
+  }
+  
+  .footer_download {
+    margin: 0 1rem;
+    max-width: 12rem;
+  }
+  
+  .footer_download a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .footer_download i {
+    color: #8bc43f;
+    margin-left: .3rem;
+  }
+  
+  .footer_download .fa-app-store {
+    font-size: 2.2rem;
+  }
+  
+  .footer_download .fa-google-play {
+    font-size: 1.9rem;
+  }
+  
+  .policy-and-mail__link {
+    margin: 1rem;
+  }
+  
+  .policy-and-mail__link:hover {
+    text-decoration: none;
+    color: #8bc43f;
+  }
+  
+  @media (max-width: 768px) {
+    .container_footer {
+      padding: 5rem 3rem 3rem;
+    }
+  
+    .footer_hipaa {
+      max-width: 20rem;
+    }
+  
+    .footer_links {
+      width: 80%;
+    }
+  
+    .footer_download {
+      margin: 0 auto;
+    }
+  
+    .footer_item {
+      margin: .6rem auto;
+    }
+  
+    .social_media i {
+      margin-bottom: .5rem;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .container_footer {
+      padding: 4rem 2rem 1rem;
+    }
+  
+    .footer_hipaa {
+      width: 100%;
+    }
+  
+    .footer_links {
+      width: 100%;
+    }
+  
+    .footer_item {
+      display: block;
+      width: auto;
+      margin: 0 auto;
+    }
+  
+    .social_media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45%;
+      margin: 0 auto;
+    }
+  
+    .policy-and-mail {
+      margin-bottom: .7rem;
+    }
+  
+    .policy-and-mail a {
+      display: block;
+      text-align: center;
+    }
+  }
+  

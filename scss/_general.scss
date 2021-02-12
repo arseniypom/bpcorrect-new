@@ -1,0 +1,57 @@
+/* GENERAL STYLES ----------------------------------------------------------------------- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+  
+h1 {
+  font-size: 2.5rem;
+  font-family: inherit;
+}
+  
+h2 {
+  font-size: 2.1rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+  
+h3 {
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-family: inherit;
+}
+  
+a, p, li {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  a, p, li {
+    font-size: 0.9rem;
+  }
+}
+  
+@media (max-width: 425px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  a, p, li {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+}

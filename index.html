@@ -19,12 +19,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BPCorrect</title>
-  <link rel="icon" href="images/icon.ico">
+  <link rel="icon" href="favicon.ico">
 
   <!-- CSS Stylesheets (bootstrap & own) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/nullstyle.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -42,75 +42,69 @@
 </head>
 
 <body>
-  <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">   
-    <a class="navbar-brand" href="#">
-      <img src="images/stevara_logo.png" class="logo_img" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav id="menu" class="header navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/stevara_logo.png" class="logo_img" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link colored_link" href="#intro"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#for_patients">Patients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#howworks">Healthcare Professionals</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Resources
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
-            <a class="dropdown-item" href="https://learn.bpcorrect.com/">Blog</a>
-            <a class="dropdown-item" href="https://learn.bpcorrect.com/faq/">FAQ</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Clinical Portal
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownPortal">
-            <a class="dropdown-item" href="https://learn.bpcorrect.com/register">Plans and Registration</a>
-            <a class="dropdown-item" href="https://admin.bpcorrect.com/user/login">Login</a>
-          </div>
-        </li>
-
-        <!--
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>-->
-        <!-- <<<<<<< HEAD -->
-       
-        
-        <!-- >>>>>>> footer -->
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link colored_link" href="#intro"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#for_patients">Patients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#howworks">Healthcare Professionals</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownResources">
+              <a class="dropdown-item" href="https://learn.bpcorrect.com/">Blog</a>
+              <a class="dropdown-item" href="https://learn.bpcorrect.com/faq/">FAQ</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Clinical Portal
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownPortal">
+              <a class="dropdown-item" href="https://learn.bpcorrect.com/register">Plans and Registration</a>
+              <a class="dropdown-item" href="https://admin.bpcorrect.com/user/login">Login</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <section class="intro_section" id="intro">
-    <div class="row">
-      <div class="col-xl-7 intro_column1">
-        <h1 class="main_header">A scientifically based solution for monitoring blood
-          pressure in the safety and privacy of your home
-        </h1>
+    <div class="intro-info">
+      <h1>A scientifically based solution for monitoring blood
+        pressure in the safety and privacy of your home
+      </h1>
 
-        <a href="https://www.youtube.com/watch?v=0tROmDFmLtA" data-youtube-id="0tROmDFmLtA" href="#" class="cta js-trigger-video-modal">
-          <span>Watch The Video</span>
-          <svg width="13px" height="10px" viewBox="0 0 13 10">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </a>
-      </div>
-      <div class="col-xl-5 intro_column2">
-        <img src="images/woman-bp.png" alt="" class="intro_img">
-      </div>
+      <a href="https://www.youtube.com/watch?v=0tROmDFmLtA" data-youtube-id="0tROmDFmLtA" href="#" class="cta js-trigger-video-modal">
+        <span>Watch The Video</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
     </div>
+    <div class="intro-arrows"></div>
+    <div class="intro_section-woman-image">
+      <img src="images/woman-bp.png" alt="" class="intro_img">
+    </div>
+    <img src="images/section_shape4.png" alt="decorative" class="intro_section-decorative-image">
+    <!-- <img src="images/hero-shape.png" alt="decorative" class="intro_section-decorative-image"> -->
   </section>
 
   <!-- video modal -->
@@ -224,7 +218,37 @@
     </div>
   </section>
 
-  <section class="howworks_section" id="howworks">
+  <section class="cards" id="">
+    <div class="cards-title">
+      <h2>Healthcare Professionals</h2>
+      <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+    </div>
+    <div class="cards-wrapper">
+      <div class="cards-wrapper-item">
+        <div class="cards-wrapper-item-image">
+          <img src="images/smartphone.png" alt="smartphone">
+        </div>
+        <h4><strong>Mobile App</strong></h4>
+        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+      </div>
+      <div class="cards-wrapper-item">
+        <div class="cards-wrapper-item-image">
+          <img src="images/laptop.png" alt="laptop">
+        </div>
+        <h4><strong>Mobile App</strong></h4>
+        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+      </div>
+      <div class="cards-wrapper-item">
+        <div class="cards-wrapper-item-image">
+          <img src="images/delivery-complete.png" alt="delivery-complete">
+        </div>
+        <h4><strong>Mobile App</strong></h4>
+        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="howworks_section" id="howworks">
     <div class="howworks_desc">
       <h2 class="howworks_h2">Healthcare Professionals</h2>
       <p class="howworks p">A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
@@ -264,7 +288,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="mobile_app_section" id="patient_app">
     <div class="row app_row">
@@ -401,7 +425,7 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Файл JS скриптов -->
-  <script src="js/script.js"></script>
+  <script src="scripts/script.js"></script>
   <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9336792.js"></script>
   <!-- End of HubSpot Embed Code -->

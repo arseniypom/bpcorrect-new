@@ -1,0 +1,28 @@
+/* ABOUT STYLES ---------------------------------------------------------------------- */
+.about_section {
+    padding: 2rem 2rem 0;
+    background-color: #32b6a1;
+    /* max-height: 25rem; */
+  }
+  
+  .about_div {
+    max-width: 60rem;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+  }
+  
+  .about_div h2 {
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .about_section {
+      padding: 1rem 1rem 0;
+    }
+  
+    .about_div h2 {
+      margin: .5rem 0;
+    }
+  }
+  

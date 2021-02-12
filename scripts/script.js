@@ -1,3 +1,25 @@
+// Скрытие хэдера при скролле вниз и отображение при скролле вверх
+var prevScrollpos = window.pageYOffset;
+$(window).on("scroll", function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    $(".header").css('top', '0')
+  } else {
+    $(".header").css('top', '-78px')
+  }
+  prevScrollpos = currentScrollPos;
+});
+
+// Добавление непрозрачного фона хэдеру при скролле ниже ста пикселей
+// Добавление прозрачного фона и отображение хэдера при нахождении наверху страницы
+$(window).on("scroll", function() {
+    if($(window).scrollTop() < 100) {
+      $(".header").css('top', '0')
+    }
+});
+
+
+
 $(document).ready(function() {
 
   $("#menu").on("click", "a", function(event) {
