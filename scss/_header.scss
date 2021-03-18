@@ -22,7 +22,16 @@
 .nav-item {
   color: #000;
   font-weight: bold;
+  margin-right: 1.5rem;
 }
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .show>.nav-link {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
 
 .dropdown-item {
   padding: .25rem 1rem;
@@ -56,7 +65,7 @@
 }
 
 .dropdown:hover {
-  color: #32b6a1;
+  color: $main-greenish-color;
 }
 
 nav .btn {
@@ -72,8 +81,8 @@ nav .btn-outline-primary {
 }
 
 nav .btn-outline-primary:hover {
-  background-color: #32b6a1;
-  border-color: #32b6a1;
+  background-color: $main-greenish-color;
+  border-color: $main-greenish-color;
 }
 
 nav .btn-outline-success {

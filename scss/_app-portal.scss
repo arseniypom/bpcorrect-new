@@ -1,0 +1,146 @@
+/* ----------------------- APP AND PORTAL SECTION ----------------------- */
+.app-portal-section {
+    background: no-repeat url('../images/blue-shape.svg');
+    background-size: cover;
+    background-color: $lightgrey-color;
+}
+
+.app-portal {
+    margin: 2rem auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+
+.app-portal-switch {
+    max-width: fit-content;
+    margin: 0 0;
+    border: 2px solid #fff;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+
+    position: relative;
+
+    &-highlight {
+        width: 5rem;
+        height: 100%;
+        // margin-left: -.04rem;
+        // margin-top: -.1rem;
+        background-color: #fff;
+        border-radius: 3px 0 0 0;
+
+        position: absolute;
+        z-index: 1;
+        transition: .3s ease-in-out;
+    }
+
+    &-option {
+        color: #fff;
+        position: relative;
+        z-index: 3;
+        transition: .4s ease-in-out;
+    }
+    &-option-app {
+        color: $main-greenish-color;
+    }
+}
+
+.app-portal-switch-option {
+    display: inline-block;
+    text-align: center;
+    padding: .7rem 1.25rem;
+    cursor: pointer;
+
+    p {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &-app {
+        width: 5rem;
+    }
+    &-portal {
+        width: 10rem;
+    }
+}
+
+.app-portal-info {
+    width: 100%;
+    min-height: 33rem;
+    padding: 1.5rem;
+
+    border: 2px solid #fff;
+    border-radius: 0 8px 8px 8px;
+    background-color: #fff;
+
+    &-header {
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgba( $main-greenish-color, .85);
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        padding: 1rem;
+
+        &-image {
+            width: 40%;
+            margin: 1rem;
+
+            &-text {
+                color: #2ea894;
+                margin-bottom: 1rem;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            min-width: 18rem;
+
+            &-list {
+                list-style-type: square;
+                line-height: 1.7rem;
+                text-align: justify;
+                list-style-position: inside;
+            }
+        }
+    }
+
+    &-portal {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .app-portal-info {
+        padding: .5rem;
+    }
+    .app-portal-info-content {
+        padding: 0;
+    }
+
+    .app-portal-info-content-image {
+        width: 80%;
+    }
+    .app-portal-info-content-text {
+        width: 90%;
+        min-width: 5rem;
+    }
+
+    .app-portal-info-portal .app-portal-info-content {
+        flex-direction: column-reverse;
+    }
+}
+

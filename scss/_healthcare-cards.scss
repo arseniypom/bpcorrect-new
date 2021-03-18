@@ -1,0 +1,97 @@
+/* HEALTHCARE CARDS STYLES ------------------------------------------------------------------ */
+.cards {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &-title {
+    margin: 2rem 0 3rem;
+    max-width: 40rem;
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cards-wrapper {
+  --gap: 2rem;
+  margin: calc(-1 * var(--gap)) 0 2rem calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-wrapper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 20rem;
+  min-height: 16rem;
+
+  margin: var(--gap) 0 0 var(--gap);
+
+  padding: 1.8rem 1.8rem 1.4rem;
+  transition: all 0.4s ease;
+
+  border: 1px solid #eaeaea;
+  border-radius: 7px;
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    margin-bottom: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    &-1 {
+      background-color: rgba(103, 88, 243, 0.1);
+    }
+    &-2 {
+      background-color: rgba($main-greenish-color, .2);
+    }
+    &-3 {
+      background-color: rgba(230, 73, 45, 0.1);
+    }
+    img {
+      height: 3rem;
+    }
+  }
+
+  h4 {
+    padding-bottom: 1rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}

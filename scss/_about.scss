@@ -1,8 +1,7 @@
 /* ABOUT STYLES ---------------------------------------------------------------------- */
 .about_section {
     padding: 2rem 2rem 0;
-    background-color: #32b6a1;
-    /* max-height: 25rem; */
+    background-color: $main-greenish-color;
   }
   
   .about_div {
@@ -10,6 +9,7 @@
     text-align: center;
     color: #fff;
     margin: 0 auto;
+    padding: 0 1.5rem;
   }
   
   .about_div h2 {

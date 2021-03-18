@@ -1,55 +1,117 @@
 /* MONITORS STYLES ------------------------------------------------------------------- */
 .monitors_section {
-    padding: 1.5rem;
-  }
-  
-  .monitors_p {
+  background-color: $lightgrey-color;
+}
+
+.monitors {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &-headline {
     text-align: center;
   }
-  
-  .monitors2 {
-    position: relative;
+
+  &-actions {
+    margin-top: 2.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+
+    h4 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        img {
+          height: 2.7rem;
+        }
+
+        &-appstore {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.monitors-carousel {
+  margin: 3rem 0 1rem;
+
+  &-item {
+    width: 10rem;
+    height: 10rem;
+    padding: .5rem 1rem;
+    display: flex;
     justify-content: center;
-    max-width: 65rem;
-    min-height: 10rem;
-    margin: 0 auto;
+    border: 1px solid $main-greenish-color;
+    border-radius: 8px;
+
+    position: relative;
+    &-image {
+      height: 6rem;
+      width: 5rem;
+      object-fit: scale-down;
+    }
+
+    &-title {
+      min-height: 2rem;
+      max-width: 90%;
+      font-size: .9rem;
+      line-height: 130%;
+      text-align: center;
+
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      bottom: .5rem;
+    }
+
   }
-  
-  .separately2 {
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  
-  .plus {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 30rem;
-  }
-  
-  .plus i {
+}
+
+.owl-prev {
+  margin-right: .5rem !important;
+}
+.owl-next{
+  margin-left: .5rem !important;
+}
+
+
+.monitors-pricing {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8bc43f;
+
+  i {
     font-size: 2rem;
-    color: #8bc43f;
+    margin-right: 1.5rem;
   }
-  
-  .plus p {
-    margin: .5rem;
-    color: #8bc43f;
+
+  p {
+    max-width: 23rem;
   }
-  
-  @media (max-width: 768px) {
-    .features_list li {
-      line-height: 1.3rem;
-      font-size: 0.8rem;
+
+  &-link {
+    max-width: 20rem;
+    &-contact {
+      display: inline;
+      font-weight: 600;
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
     }
-  
-    .monitors2 {
-      padding-bottom: 2rem;
-    }
   }
+
+}
+
+
   

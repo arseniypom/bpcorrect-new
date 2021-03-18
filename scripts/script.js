@@ -98,6 +98,62 @@ function toggle_video_modal() {
 toggle_video_modal();
 
 
+// Switch The BPCorrect App and The BPCorrect Clinician Portal
+$('#BP-app').click(function(){
+  $('.app-portal-switch-highlight').css({
+    'margin-left': '-.04rem',
+    'width': '5rem',
+    'border-radius': '3px 0 0 0'
+  });
+  $('.app-portal-switch-option-app').css({
+    'color': '#32b6a1'
+  });
+  $('.app-portal-switch-option-portal').css({
+    'color': '#fff'
+  });
+  $('.app-portal-info-portal').hide();
+  $('.app-portal-info-app').show();
+});
+
+$('#BP-portal').click(function(){
+  $('.app-portal-switch-highlight').css({
+    'margin-left': '5.3rem',
+    'width': '10rem',
+    'border-radius': '0 3px 0 0'
+  });
+  $('.app-portal-switch-option-portal').css({
+    'color': '#32b6a1'
+  });
+  $('.app-portal-switch-option-app').css({
+    'color': '#fff'
+  });
+  $('.app-portal-info-app').hide();
+  $('.app-portal-info-portal').show();
+});
+
+
+// OWL CAROUSEL
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  autoplay:true,
+  margin:40,
+  nav:true,
+  dots:false,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+});
+$( ".owl-prev").html('<i class="fas fa-arrow-circle-left"></i>');
+$( ".owl-next").html('<i class="fas fa-arrow-circle-right"></i>');
+
 
 
 

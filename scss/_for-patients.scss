@@ -1,105 +1,80 @@
 /* FOR PATIENTS STYLES --------------------------------------------------------------- */
-.for_patients_section {
-    padding: 1rem;
+.for_patients-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .for_patients-title {
+    margin-bottom: 1.5rem;
   }
+}
+
+.for_patients-content {
+  --gap: 2rem;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
   
-  .for_patients_section h2 {
-    text-align: center;
-    font-size: 2.3rem;
-    margin: 1rem 0;
-  }
-  
-  .for_patients_card {
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .for_patiens_list {
-    margin: .6rem 2rem;
-  }
-  
-  .for_patiens_list li {
-    list-style-position: inside;
-    list-style-type: square;
-    line-height: 1.4rem;
-  }
-  
-  .for_patients_card p {
-    padding: 1rem 1.5rem;
-    background-color: #32b6a1;
-    color: #fff;
-    text-align: justify;
-  }
-  
-  .monitors {
-    position: relative;
-    padding: 1.5rem 2rem;
-    max-height: 27rem;
-  }
-  
-  .monitor_example {
-    margin-top: 1rem;
-    min-width: 19rem;
-    max-width: 20rem;
-  }
-  
-  .monitor_img {
-    width: 100%;
-    max-width: 6rem;
-  }
-  
-  .monitor_example a {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    transition: all 0.3s ease 0s;
-  }
-  
-  .monitor_example a:hover {
-    color: #8bc43f;
-    font-size: 1.2rem;
-  }
-  
-  .separately {
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  
-  .download {
-    text-align: center;
-    margin: 1rem auto;
-    max-width: 25rem;
-  }
-  
-  .download a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .download img {
-    max-width: 10rem;
-    margin: 0 auto;
-  }
-  
-  .android_app {
-    text-align: center;
-  }
-  
-  @media (max-width: 767px) {
-    .monitors {
-      padding: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+
+  &-text {
+    max-width: 30rem;
+    background-color: $lightgrey-color;
+    border-radius: 7px;
+
+    margin: var(--gap) 0 0 var(--gap);
+
+    h3 {
+      color: $main-greenish-color;
+      margin-bottom: 1rem;
+      line-height: 130%;
+      max-width: 20rem;
+      font-size: 1.5rem;
+
+      span {
+        color: #8bc43f;
+      }
     }
-  
-    .download i {
-      margin-left: .5rem;
+    p{
+      text-align: justify;
     }
-  
-    .download p {
-      margin-left: 0;
+
+    padding: 2rem;
+  }
+}
+
+.for_patients-content-advantages {
+  display: flex;
+  flex-direction: column;
+
+  margin: var(--gap) 0 0 var(--gap);
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+
+  &-list {
+    &-item {
+      // max-width: 30rem;
+      margin-bottom: .5rem;
+      padding: .5rem;
+      border: 1px solid #eaeaea;
+      border-radius: 7px;
+
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 1.3rem;
+        color: #8bc43f;
+
+        margin-right: 1rem;
+      }
     }
   }
+}
   

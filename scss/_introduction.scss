@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #32b6a1;
+  background-color: $main-greenish-color;
   color: #fff;
   overflow: hidden;
   padding-top: 4rem;
@@ -17,7 +17,7 @@
   &-woman-image {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -.1rem;
     z-index: 3;
 
     img {
@@ -35,41 +35,85 @@
 
 
 .intro-info {
-  max-width: 50rem;
+  max-width: 80%;
+  line-height: 350%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 
-  h1 {
-    margin-bottom: 5rem;
+  &-text {
     text-transform: uppercase;
+    text-align: center;
+
+    &-lower {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-actions {
+    width: 18rem;
+    align-self: center;
+    &-download {
+      margin: 3rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  .intro-info {
+    max-width: 100%;
+    &-text {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+    }
   }
 }
 
 
 @media (max-width: 1024px) {
   .intro_section {
-    // padding-top: 2rem;
-  }
-
-  .intro_img {
-    max-width: 20rem;
-  }
-
-  .intro_column1 {
-    padding-bottom: 0;
+    &-woman-image {
+      img {
+        max-width: 20rem;
+      }
+    }
   }
 }
 
 @media (max-width: 767px) {
-  .main_header {
-    margin: 0 0 2rem 1.5rem;
+  .intro_section {
+    align-items: flex-start;
+    padding: 35% 0 0;
+  }
+
+  .intro-info {
+    &-text {
+      line-height: 140%;
+      &-lower {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &-actions-download {
+      margin: 1rem 0 0;
+    }
   }
 }
 
-@media (max-width: 424px) {
-  .main_header {
-    text-align: center;
+@media (max-width: 425px) {
+  .intro_section {
+    height: 92vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .intro_section {
+    &-woman-image {
+      img {
+        max-width: 16rem;
+      }
+    }
   }
 }
 
@@ -269,35 +313,52 @@ $peakopacity:0.7;
 $arrows-color:rgba(255,255,255,$peakopacity);
 
 
-.intro_section {
-  .intro-arrows {
+.intro-arrows {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  z-index: 3;
+  width:$size;
+  height:$size;
+  transform:translate(-50%,-50%);
+  &:before {
+    content: '';
     position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    z-index: 3;
-    width:$size;
-    height:$size;
-    transform:translate(-50%,-50%);
-    &:before {
-      content: '';
-      position: absolute;
-      width:100%;
-      height:100%;
-      border-left:$size/3 solid $arrows-color;
-      border-bottom:$size/3 solid $arrows-color;
-      transform:translate($size/3,$size*4/3)rotate(-45deg);
-      animation: intro-arrows $speed linear infinite;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      width:100%;
-      height:100%;
-      border-left:$size/3 solid $arrows-color;
-      border-bottom:$size/3 solid $arrows-color;
-      transform:translate($size*2/3,0px)rotate(-45deg) ;
-      animation: intro-arrows $speed linear infinite $speed/-2;
-    }
+    width:100%;
+    height:100%;
+    border-left:$size/3 solid $arrows-color;
+    border-bottom:$size/3 solid $arrows-color;
+    transform:translate($size/3,$size*4/3)rotate(-45deg);
+    animation: intro-arrows $speed linear infinite;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-left:$size/3 solid $arrows-color;
+    border-bottom:$size/3 solid $arrows-color;
+    transform:translate($size*2/3,0px)rotate(-45deg) ;
+    animation: intro-arrows $speed linear infinite $speed/-2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-arrows {
+    z-index: 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-arrows {
+    left: 5rem;
+    bottom: 7%;
+  }
+}
+
+@media (max-width: 424px) {
+  .intro-arrows {
+    left: 2rem;
   }
 }
 

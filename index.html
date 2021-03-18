@@ -23,14 +23,10 @@
 
   <!-- CSS Stylesheets (bootstrap & own) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/nullstyle.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
-  <!-- Icofont -->
-  <link rel="stylesheet" href="icofont/icofont.min.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/bcc546957c.js" crossorigin="anonymous"></script>
@@ -60,7 +56,7 @@
             <a class="nav-link" href="#for_patients">Patients</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#howworks">Healthcare Professionals</a>
+            <a class="nav-link" href="#for_professionals">Healthcare Professionals</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,19 +81,24 @@
     </div>
   </nav>
 
-  <section class="intro_section" id="intro">
+  <section class="intro_section container-medium" id="intro">
     <div class="intro-info">
-      <h1>A scientifically based solution for monitoring blood
-        pressure in the safety and privacy of your home
-      </h1>
+      <h1 class="intro-info-text intro-info-text-upper">a scientifically based solution for</h1>
+      <h1 class="intro-info-text intro-info-text-lower">home blood pressure monitoring</h1>
 
-      <a href="https://www.youtube.com/watch?v=0tROmDFmLtA" data-youtube-id="0tROmDFmLtA" href="#" class="cta js-trigger-video-modal">
-        <span>Watch The Video</span>
-        <svg width="13px" height="10px" viewBox="0 0 13 10">
-          <path d="M1,5 L11,5"></path>
-          <polyline points="8 1 12 5 8 9"></polyline>
-        </svg>
-      </a>
+      <div class="intro-info-actions">
+        <a href="https://www.youtube.com/watch?v=0tROmDFmLtA" data-youtube-id="0tROmDFmLtA" href="#" class="cta js-trigger-video-modal">
+          <span>Watch The Video</span>
+          <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </a>
+        <div class="intro-info-actions-download">
+          <a class="button-download button-download-appstore" target="_blank" href="https://apps.apple.com/us/app/id1494193645"><i class="fab fa-apple"></i> Download</a>
+          <a class="button-download button-download-googleplay" target="_blank" href="https://play.google.com/store/apps/details?id=arya.bpcorrect"><i class="fab fa-google-play"></i> Download</a>
+        </div>
+      </div>
     </div>
     <div class="intro-arrows"></div>
     <div class="intro_section-woman-image">
@@ -142,71 +143,67 @@
   </section>
   <!-- end video modal -->
 
-  <section class="for_patients_section" id="for_patients">
-    <h2>Patients</h2>
-    <div class=" app_row">
-      <div class="col-md-6 offset-md-3 offset-sm-0">
-        <div class="card for_patients_card">
+  <section class="for_patients_section container-medium" id="for_patients">
+    <div class="for_patients">
+      <div class="for_patients-title">
+        <h2>Patients</h2>
+      </div>
+      <div class="for_patients-content">
+        <div class="for_patients-content-text">
+          <h3> Why monitor your blood pressure <span>at home</span> ?</h3>
           <p>Blood pressure measured in the doctor’s office is not always
-            accurate. And these days, monitoring your blood pressure in the safety and privacy of your home may be
- more preferable to going to a doctor's office. Experts agree that checking your blood pressure at home in
+            accurate.
+            And these days, monitoring your blood pressure in the safety and privacy of your home may be
+            more preferable to going to a doctor's office. Experts agree that checking your blood pressure at home in
             the morning and in the evening for 7 days in a row is the best way to
-            determine your true blood pressure. The BPCorrect app helps you do that by:</p>
-          <ul class="for_patiens_list">
-            <li>Connecting to affordable and accurate home blood pressure monitors</li>
-            <li>Providing step-by-step instructions on how to correctly measure blood pressure</li>
-            <li>Reminding you to check your blood pressure for 7 days in a row</li>
-            <li>Summarizing your results</li>
-            <li>Providing links to information about managing your blood pressure</li>
-            <li>Allowing you to share your blood pressure measurements with your doctor</li>
-          </ul>
+            determine your true blood pressure. </p>
+        </div>
+        <div class="for_patients-content-advantages">
+          <div class="for_patients-content-advantages-title">
+            <h4>The BPCorrect app helps you do that by:</h4>
+          </div>
+          <div class="for_patients-content-advantages-list">
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Connecting to affordable and accurate home blood pressure monitors</p>
+            </div>
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Providing step-by-step instructions on how to correctly measure blood pressure</p>
+            </div>
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Reminding you to check your blood pressure for 7 days in a row</p>
+            </div>
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Summarizing your results</p>
+            </div>
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Providing links to information about managing your blood pressure</p>
+            </div>
+            <div class="for_patients-content-advantages-list-item">
+              <i class="far fa-check-circle"></i>
+              <p class="for_patients-content-advantages-list-item-text">Allowing you to share your blood pressure measurements with your doctor</p>
+            </div>
+          </div>
         </div>
       </div>
-
-  </section>
-
-  <section class="monitors_section" id="monitors">
-    <div class="">
-      <!-- <img src="images/woman-bp.png" alt="" class="app_img"> -->
-      <p class="monitors_p">The BPCorrect app works with the following validated and accurate
-        home blood pressure monitors (*must be purchased separately):</p>
-      <div class="row monitors2">
-        <div class="col-md-12 col-lg-3 monitor_example"><a target="_blank" href="https://www.amazon.com/gp/product/B00MXTE7CS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MXTE7CS&linkCode=as2&tag=bpcorrect-20&linkId=896cd10a295efae9b5394d8ca1538c77"><img src="//ir-na.amazon-adsystem.com/e/ir?t=bpcorrect-20&l=am2&o=1&a=B00MXTE7CS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /><img src="images/A&D-UA-651-BLE.jpg" alt="" class="monitor_img"> A&D UA 651 BLE</a>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.com/gp/product/B07RYBKNC2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07RYBKNC2&linkCode=as2&tag=bpcorrect-20&linkId=4ce07e6452c27af7f33afedf04acdd16"><img src="images/Omron-BP5250.jpg" alt="" class="monitor_img"> Omron BP5250</a>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.com/gp/product/B01MRL790Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MRL790Q&linkCode=as2&tag=bpcorrect-20&linkId=c82d81fc736f6591f590293517a5c71d"><img src="images/Omron-Evolv.jpg" alt="" class="monitor_img"> Omron Evolv</a>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.in/Omron-Smart-Elite-Intellisense-Connectivity/dp/B075SL657Z"><img src="images/Omron HEM-7600T.jpg" alt="" class="monitor_img"> Omron HEM-7600T (available in India)</a>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.in/gp/product/B089GL9T96/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1"><img src="images/Omron HEM 7361T.jpg" alt="" class="monitor_img"> Omron HEM 7361T (available in India)</a>
-        </div>
-       
-      </div>
-
-      <div class="download">
-        <h3><strong>Now available on the Apple App Store and the Google Play Store</strong></h3>
-        <div class="row">
-          <a target="_blank" href="https://apps.apple.com/us/app/id1494193645" class="col-md-6"><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt=""></a>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=arya.bpcorrect" class="col-md-6"><img src="images/google-play-badge.png" alt=""></a>
-        </div>
-      </div>
-
     </div>
+
+
   </section>
 
-  <section class="patient_why_section" id="patient_why">
+
+  <section class="patient_why_section container-medium" id="patient_why">
     <div class="middle_div">
-      <h3 class="middle_h3">Why People Choose <span>BPCorrect</span>?</h3>
+      <h3 class="middle_h3">Why People Choose <span>BPCorrect</span> ?</h3>
       <div class="row">
-        <div class="col-sm-6">
-          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/AHA_logo.png" alt="" class="organisation_logo"></div>
-          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/uspstf_logo.png" alt="" class="organisation_logo"></div>
-          <div class="organisation"><i class="far fa-check-circle"></i><img src="images/MH_logo.png" alt="" class="organisation_logo"></div>
+        <div class="col-sm-6 organizations">
+          <div class="organizations-item"><img src="images/AHA_logo.png" alt="organization" class="organizations-item-logo"></div>
+          <div class="organizations-item"><img src="images/uspstf_logo.png" alt="organization" class="organizations-item-logo"></div>
+          <div class="organizations-item"><img src="images/MH_logo.png" alt="organization" class="organizations-item-logo"></div>
         </div>
         <div class="col-sm-6 right_column">
           <p class="middle_p">The <strong>American Heart Association (AHA)</strong>, the <strong>United States
@@ -218,145 +215,171 @@
     </div>
   </section>
 
-  <section class="cards" id="">
+  <section class="cards container-medium" id="for_professionals">
     <div class="cards-title">
       <h2>Healthcare Professionals</h2>
-      <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+      <p>A complete home blood pressure monitoring platform designed by physicians.</p>
     </div>
     <div class="cards-wrapper">
       <div class="cards-wrapper-item">
-        <div class="cards-wrapper-item-image">
-          <img src="images/smartphone.png" alt="smartphone">
+        <div class="cards-wrapper-item-image cards-wrapper-item-image-1">
+          <img src="images/smartphone.svg" alt="smartphone">
         </div>
         <h4><strong>Mobile App</strong></h4>
-        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+        <p>Connects to validated BP monitors and instructs patients to accurately monitor BP</p>
       </div>
       <div class="cards-wrapper-item">
-        <div class="cards-wrapper-item-image">
-          <img src="images/laptop.png" alt="laptop">
+        <div class="cards-wrapper-item-image cards-wrapper-item-image-2">
+          <img src="images/laptop.svg" alt="laptop">
         </div>
-        <h4><strong>Mobile App</strong></h4>
-        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+        <h4><strong>Clinician Portal</strong></h4>
+        <p>Provides summaries of patients’ BP measurements</p>
       </div>
       <div class="cards-wrapper-item">
-        <div class="cards-wrapper-item-image">
-          <img src="images/delivery-complete.png" alt="delivery-complete">
+        <div class="cards-wrapper-item-image cards-wrapper-item-image-3">
+          <img src="images/complete.svg" alt="delivery-complete">
         </div>
-        <h4><strong>Mobile App</strong></h4>
-        <p>A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
+        <h4><strong>Complete Remote Monitoring Platform</strong></h4>
+        <p>Engaged patients and improved management of hypertension</p>
       </div>
     </div>
   </section>
 
-  <!-- <section class="howworks_section" id="howworks">
-    <div class="howworks_desc">
-      <h2 class="howworks_h2">Healthcare Professionals</h2>
-      <p class="howworks p">A complete home blood pressure monitoring platform designed for primary care practices by primary care doctors.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-lg-2 offset-lg-3">
-        <div class="card">
-          <div class="round"><img src="images/begin1.png" alt="" class="step_icon">
-            <div class="number">
-              <h2>1</h2>
+  <section class="app-portal-section container-medium" id="app-portal">
+      <div class="app-portal">
+          <ul class="app-portal-switch">
+              <div class="app-portal-switch-highlight"></div>
+              <li class="app-portal-switch-option app-portal-switch-option-app" id="BP-app"><p>App</p></li>
+              <li class="app-portal-switch-option app-portal-switch-option-portal" id="BP-portal"><p>Clinician Portal</p></li>
+          </ul>
+          <div class="app-portal-info app-portal-info-app">
+            <h2 class="app-portal-info-header">The BPCorrect App</h2>
+            <div class="app-portal-info-content">
+              <div class="app-portal-info-content-image">
+                <img src="images/img1.png" alt="">
+              </div>
+              <div class="app-portal-info-content-text">
+                <ul class="app-portal-info-content-text-list">
+                  <li> Integrates with clinically validated, affordable home BP monitors</li>
+                  <li> Includes a 7-day BP monitoring period recommended by the AHA </li>
+                  <li> Reminds patients when BP measurements are due</li>
+                  <li> Using video and text, provides step-by-step patient instructions for BP measurement </li>
+                  <li> Includes timers for the appropriate rest intervals before and between BP measurements </li>
+                  <li> Aggregates BP values and displays summaries for patients</li>
+                  <li> De-emphasizes focus on individual measurements </li>
+                  <li> Incorporates lifestyle education to lower BP </li>
+                  <li> Sends all BP measures to the HIPAA-secure BPCorrect Clinician Portal </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <p class="step_name">Mobile App</p>
-          <p class="step_desc">Connects to validated BP monitors and instructs patients to accurately monitor BP</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-2">
-        <div class="card">
-          <div class="round"><img src="images/begin2.png" alt="" class="step_icon">
-            <div class="number">
-              <h2>2</h2>
+          <div class="app-portal-info app-portal-info-portal">
+            <h2 class="app-portal-info-header">The BPCorrect Clinician Portal</h2>
+            <div class="app-portal-info-content">
+              <div class="app-portal-info-content-text">
+                <ul class="app-portal-info-content-text-list">
+                  <li> Provides reports on individual patient’s progress on obtaining sufficient measurements to determine an accurate assessment of the patient’s blood pressure</li>
+                  <li> Displays the average blood pressure value and its interpretation based on AHA guidelines once a sufficient number of measurements have been obtained</li>
+                  <li> Includes a dashboard highlighting patients with average blood pressures outside of range</li>
+                  <li> Includes ability to create accounts for clinical staff members to review blood pressure measurements</li>
+                  <li> Includes timer to record time spent per patient to facilitate billing using remote monitoring codes (CPT 99453, 99454, 99457, 99458)</li>
+                </ul>
+              </div>
+              <div class="app-portal-info-content-image">
+                <div class="app-portal-info-content-image-text">
+                  <h4 class="availability_par"><b>Now Available</b></h4>
+                  <p class="availability_par"><i>Choose a plan that works best for your practice</i></p>
+                  <p class="availability_par"><i>Free for up to 3 patients</i></p>
+                </div>
+                <img src="images/laptop-img.png" alt="computer">
+              </div>
             </div>
           </div>
-          <p class="step_name">Clinician Portal</p>
-          <p class="step_desc">Provides summaries of patients’ BP measurements</p>
-        </div>
       </div>
-      <div class="col-md-4 col-lg-2">
-        <div class="card">
-          <div class="round"><img src="images/begin3.png" alt="" class="step_icon">
-            <div class="number">
-              <h2>3</h2>
-            </div>
-          </div>
-          <p class="step_name">Complete Remote Monitoring Platform</p>
-          <p class="step_desc">Engaged patients and improved management of hypertension</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  </section>
 
-  <section class="mobile_app_section" id="patient_app">
-    <div class="row app_row">
-      <div class="col-md-6 picture_col">
-        <img src="images/img1.png" alt="" class="app_img">
+  <section class="monitors_section container-medium" id="monitors">
+    <div class="monitors">
+      <p class="monitors-headline">The BPCorrect app works with the following validated and accurate
+        home blood pressure monitors:
+      </p>
+      <div class="monitors-carousel owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <a class="monitors-carousel-item owl-item" target="_blank" href="https://www.amazon.com/gp/product/B00MXTE7CS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MXTE7CS&linkCode=as2&tag=bpcorrect-20&linkId=896cd10a295efae9b5394d8ca1538c77">
+                  <img class="monitors-carousel-item-image" src="images/A&D-UA-651-BLE.jpg" alt="">
+              <p class="monitors-carousel-item-title">A&D UA 651 BLE</p>
+            </a>
+            <a class="monitors-carousel-item owl-item" target="_blank" href="https://www.amazon.com/gp/product/B07RYBKNC2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07RYBKNC2&linkCode=as2&tag=bpcorrect-20&linkId=4ce07e6452c27af7f33afedf04acdd16">
+                  <img class="monitors-carousel-item-image" src="images/Omron-BP5250.jpg" alt="">
+              <p class="monitors-carousel-item-title"> Omron BP5250</p>
+            </a>
+            <a class="monitors-carousel-item owl-item" target="_blank" href="https://www.amazon.com/gp/product/B01MRL790Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MRL790Q&linkCode=as2&tag=bpcorrect-20&linkId=c82d81fc736f6591f590293517a5c71d">
+                  <img class="monitors-carousel-item-image" src="images/Omron-Evolv.jpg" alt="">
+              <p class="monitors-carousel-item-title">Omron Evolv</p>
+            </a>
+            <a class="monitors-carousel-item owl-item"  target="_blank" href="https://www.amazon.in/Omron-Smart-Elite-Intellisense-Connectivity/dp/B075SL657Z">
+                  <img class="monitors-carousel-item-image" src="images/Omron HEM-7600T.jpg" alt="">
+              <p class="monitors-carousel-item-title">Omron HEM-7600T (available in India)</p>
+            </a>
+            <a class="monitors-carousel-item owl-item"  target="_blank" href="https://www.amazon.in/gp/product/B089GL9T96/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">
+                  <img class="monitors-carousel-item-image" src="images/Omron HEM 7361T.jpg" alt="">
+              <p class="monitors-carousel-item-title">Omron HEM 7361T (available in India)</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2>The BPCorrect App</h2>
-        <ul class="features_list">
-          <li> Integrates with clinically validated, affordable home BP monitors</li>
-          <li> Includes a 7-day BP monitoring period recommended by the AHA </li>
-          <li> Reminds patients when BP measurements are due</li>
-          <li> Using video and text, provides step-by-step patient instructions for BP measurement </li>
-          <li> Includes timers for the appropriate rest intervals before and between BP measurements </li>
-          <li> Aggregates BP values and displays summaries for patients</li>
-          <li> De-emphasizes focus on individual measurements </li>
-          <li> Incorporates lifestyle education to lower BP </li>
-          <li> Sends all BP measures to the HIPAA-secure BPCorrect Clinician Portal </li>
-        </ul>
+      <div class="monitors-pricing">
+        <i class="fas fa-dollar-sign"></i>
+        <a href="mailto:info@bpcorrect.com" class="monitors-pricing-link">Preferred pricing may be available, please <p href="mailto:info@bpcorrect.com" class="monitors-pricing-link-contact">contact</p> BPCorrect for more details.<a>
+      </div>
+      <div class="monitors-actions">
+        <h4>Now available on the Apple App Store and the Google Play Store!</h4>
+        <div class="monitors-actions-buttons">
+          <a class="monitors-actions-buttons-item monitors-actions-buttons-item-appstore" target="_blank" href="https://apps.apple.com/us/app/id1494193645"><img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt=""></a>
+          <a class="monitors-actions-buttons-item monitors-actions-buttons-item-googleplay" target="_blank" href="https://play.google.com/store/apps/details?id=arya.bpcorrect"><img src="images/google-play-badge.png" alt=""></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="portal_section" id="portal">
-    <div class="row app_row">
-      <div class="col-md-6">
-        <h2>The BPCorrect Clinician Portal</h2>
-        <p class="availability_par"><b>Now Available</b></p>
-        <p class="availability_par"><b>Choose a plan that works best for your practice</b>
-        <p class="availability_par"><b>Free for up to 3 patients</b>
-        <ul class="features_list">
-          <li> Provides reports on individual patient’s progress on obtaining sufficient measurements to determine an accurate assessment of the patient’s blood pressure</li>
-          <li> Displays the average blood pressure value and its interpretation based on AHA guidelines once a sufficient number of measurements have been obtained</li>
-          <li> Includes a dashboard highlighting patients with average blood pressures outside of range</li>
-          <li> Includes ability to create accounts for clinical staff members to review blood pressure measurements</li>
-          <li> Includes timer to record time spent per patient to facilitate billing using remote monitoring codes (CPT 99453, 99454, 99457, 99458)</li>
-        </ul>
+  <section class="testimonials_section container-medium" id="testimonials">
+    <div class="testimonials">
+      <div class="testimonials-title">
+        <h2>What people say?</h2>
       </div>
-      <div class="col-md-6 picture_col">
-        <img src="images/laptop-img.png" alt="" class="app_img">
-      </div>
-    </div>
-  </section>
-
-  <section class="monitors_section" id="monitors">
-    <div>
-      <!-- <img src="images/woman-bp.png" alt="" class="app_img"> -->
-      <p class="monitors_p">The BPCorrect app works with the following validated and accurate
-        home blood pressure monitors:</p>
-      <div class="row monitors2">
-        <div class="col-lg-3 monitor_example">
-          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B00MXTE7CS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MXTE7CS&linkCode=as2&tag=bpcorrect-20&linkId=896cd10a295efae9b5394d8ca1538c77"><img src="images/A&D-UA-651-BLE.jpg" alt="" class="monitor_img"> A&D UA 651 BLE</a></div>
+      <div class="testimonials-content">
+        <div class="testimonials-content-cards">
+          <div class="testimonials-content-cards-row">
+            <div class="testimonials-content-cards-item">
+              <h4 class="testimonials-content-cards-item-title">– Patient</h4>
+              <p class="testimonials-content-cards-item-text">I find the app easy to use and love that it gives the average blood pressure as recommended by the American Heart Association.</p>
+              <i class="fas fa-quote-right testimonials-content-cards-item-quote"></i>
+            </div>
+            <div class="testimonials-content-cards-item">
+              <h4 class="testimonials-content-cards-item-title">– Patient</h4>
+              <p class="testimonials-content-cards-item-text">I like that the app asks whether I have been at rest for five minutes since I usually don’t do this.</p>
+              <i class="fas fa-quote-right testimonials-content-cards-item-quote"></i>
+            </div>
+            <div class="testimonials-content-cards-item">
+              <h4 class="testimonials-content-cards-item-title">– Patient</h4>
+              <p class="testimonials-content-cards-item-text">I like the reminders in the app since I don’t always remember to check my blood pressure.</p>
+              <i class="fas fa-quote-right testimonials-content-cards-item-quote"></i>
+            </div>
+          </div>
+          <div class="testimonials-content-cards-row">
+            <div class="testimonials-content-cards-item">
+              <h4 class="testimonials-content-cards-item-title">– Family Physician</h4>
+              <p class="testimonials-content-cards-item-text">I think this platform is quite helpful since we know office blood pressures are sometimes not representative.</p>
+              <i class="fas fa-quote-right testimonials-content-cards-item-quote"></i>
+            </div>
+            <div class="testimonials-content-cards-item">
+              <h4 class="testimonials-content-cards-item-title">– Family Physician</h4>
+              <p class="testimonials-content-cards-item-text">My patients have been asking me for something like this. They love the idea of being able to monitor their blood pressure at home, and this makes it easy for me to review.</p>
+              <i class="fas fa-quote-right testimonials-content-cards-item-quote"></i>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-3 monitor_example">
-          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B07RYBKNC2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07RYBKNC2&linkCode=as2&tag=bpcorrect-20&linkId=4ce07e6452c27af7f33afedf04acdd16"><img src="images/Omron-BP5250.jpg" alt="" class="monitor_img"> Omron BP5250</a></div>
-        </div>
-        <div class="col-lg-3 monitor_example">
-          <div class=""><a target="_blank" href="https://www.amazon.com/gp/product/B01MRL790Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01MRL790Q&linkCode=as2&tag=bpcorrect-20&linkId=c82d81fc736f6591f590293517a5c71d"><img src="images/Omron-Evolv.jpg" alt="" class="monitor_img"> Omron Evolv</a></div>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.in/Omron-Smart-Elite-Intellisense-Connectivity/dp/B075SL657Z"><img src="images/Omron HEM-7600T.jpg" alt="" class="monitor_img"> Omron HEM-7600T (available in India)</a>
-        </div>
-        <div class="col-sm-12 col-lg-3 monitor_example">
-          <a target="_blank" href="https://www.amazon.in/gp/product/B089GL9T96/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1"><img src="images/Omron HEM 7361T.jpg" alt="" class="monitor_img"> Omron HEM 7361T (available in India)</a>
-        </div>
-
-      <div class="plus"><i class="icofont-plus-circle"></i>
-        <p>Preferred pricing may be available, please contact BPCorrect for more details.<p>
       </div>
     </div>
   </section>
@@ -386,8 +409,8 @@
     </div>
   </section>
 
-  <section id="footer">
-    <div class="container_footer">
+  <section id="footer_section">
+    <div class="footer">
       <img src="images/HIPAA.png" alt="" class="footer_hipaa">
       <div class="footer_links">
         <div class="footer_links_column">
@@ -404,26 +427,25 @@
           <p class="footer_links_column_header"><strong>Terms</strong></p>
           <a class="footer_links_column_link" href="https://learn.bpcorrect.com/privacy-policy/">Privacy Policy</a>
           <a class="footer_links_column_link" href="https://learn.bpcorrect.com/terms-and-conditions/">Terms and conditions</a>
+          <a class="footer_links_column_link" href="https://learn.bpcorrect.com/business-associate-agreement/"target="_blank">Business Associate Agreement</a>
         </div>
-        <!-- <div class="policy-and-mail">
-          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/privacy-policy/">Privacy Policy</a>
-          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/terms-and-conditions/">Terms and conditions</a>
-          <a class="policy-and-mail__link" href="https://learn.bpcorrect.com/register/">Register (for clinicians)</a>
-          <a class="policy-and-mail__link" href="https://admin.bpcorrect.com/user/login">BPCorrect Clinican Portal (for registered clinicians)</a>
-          <a class="policy-and-mail__link" href="mailto:info@bpcorrect.com"><i class="fas fa-at"></i>info@bpcorrect.com</a>
-        </div> -->
       </div>
       <div class="social_media">
         <a class="social-media_link" href="https://twitter.com/BpCorrect" target="_blank"><i class="fab fa-twitter"></i></a>
         <a class="social-media_link" href="https://www.facebook.com/BPCorrect/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a class="social-media_link" href="https://www.linkedin.com/company/30130085" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <p>Copyright © 2021 Stevara, LLC. All rights reserved.</p>
+      <a class="footer-email" href="mailto:info@bpcorrect.com"><i class="fas fa-at"></i>info@bpcorrect.com</a>
+      <p class="text-center">Copyright © 2021 Stevara, LLC. All rights reserved.</p>
     </div>
   </section>
 
   <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <!-- Owl Carousel -->
+  <script src="owlcarousel/owl.carousel.min.js">
+  </script>
   <!-- Файл JS скриптов -->
   <script src="scripts/script.js"></script>
   <!-- Start of HubSpot Embed Code -->
